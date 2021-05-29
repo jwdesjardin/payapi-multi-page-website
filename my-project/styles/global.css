@@ -1,4 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  .primary-button {
+    @apply bg-pink-700 hover:bg-pink-400  hover:border-pink-400  disabled:bg-opacity-50 text-white-100 text-md font-bold py-4 px-6 rounded-full leading-none;
+  }
+  .button-light {
+    @apply bg-white-100 hover:bg-blue-700 border-2 border-blue-700 text-blue-700 hover:text-white-100 text-md font-bold py-4 px-6 rounded-full leading-none disabled:border-opacity-50 disabled:text-opacity-50;
+  }
+  .button-dark {
+    @apply bg-blue-900 hover:bg-white-100 border-2 border-white-100 text-white-100 hover:text-blue-900 text-md font-bold py-4 px-8 rounded-full leading-none disabled:border-opacity-50 disabled:text-opacity-50;
+  }
+}
 /*# sourceMappingURL=global.css.map */

@@ -9,7 +9,15 @@ export default function Home() {
 			</Head>
 
 			<main className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center'>
-				<p className=' bg-blue-900 text-3xl '>yellow</p>
+				<button disabled className='primary-button'>
+					Schedule a demo
+				</button>
+				<button disabled className='button-light'>
+					Submit Query
+				</button>
+				<div className='h-60 w-full bg-blue-900'>
+					<button className='button-dark'>About Us</button>
+				</div>
 			</main>
 		</div>
 	)
