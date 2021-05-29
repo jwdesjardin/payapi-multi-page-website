@@ -39,6 +39,7 @@ module.exports = {
 				100: '#FBFCFE',
 			},
 			grey: {
+				200: '#ededed',
 				400: '#979797',
 			},
 		},

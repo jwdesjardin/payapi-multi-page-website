@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import React from 'react'
+import Checkbox from '../components/Checkbox'
 
 export default function Home() {
 	return (
@@ -23,7 +25,7 @@ export default function Home() {
 					<input type='text' className='text-input' placeholder='Name' />
 					<textarea rows={5} className='text-input input-error' placeholder='Message' />
 					<div className='mt-6'>
-						<input type='checkbox' className='checkbox' />
+						<Checkbox></Checkbox>
 					</div>
 				</div>
 			</main>

@@ -21,4 +21,16 @@
     @apply border-red-500 text-red-500 placeholder-red-500 focus:border-red-500;
   }
 }
+
+input:checked + div {
+  @apply bg-pink-700;
+}
+
+input:disabled + div {
+  @apply bg-grey-200;
+}
+
+input:checked + div svg {
+  @apply block;
+}
 /*# sourceMappingURL=global.css.map */
