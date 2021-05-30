@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const Checkbox = () => {
 	const [checked, toggleChecked] = useState(false)
-	console.log(checked)
+	// console.log(checked)
 	return (
 		<div className='flex items-center'>
 			<input

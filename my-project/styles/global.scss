@@ -5,8 +5,14 @@
 @tailwind utilities;
 
 @layer base {
+	html,
 	body {
 		@apply text-blue-700 bg-white-200;
+		width: 100%;
+		height: 100%;
+		margin: 0px;
+		padding: 0px;
+		overflow-x: hidden;
 	}
 }
 
@@ -54,4 +60,36 @@ input:disabled + div {
 
 input:checked + div svg {
 	@apply block;
+}
+
+@keyframes slidein {
+	from {
+		transform: translateX(110%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes slideout {
+	from {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(110%);
+	}
+}
+
+.translate-x-110 {
+	transform: translateX(120%);
+}
+
+.slideIn {
+	animation: slidein;
+	animation-duration: 1s;
+}
+
+.slideOut {
+	animation: slideout;
+	animation-duration: 1s;
 }

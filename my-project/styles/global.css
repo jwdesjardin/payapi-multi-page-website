@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
+  html,
   body {
     @apply text-blue-700 bg-white-200;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
   }
 }
 
@@ -44,5 +50,68 @@ input:disabled + div {
 
 input:checked + div svg {
   @apply block;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    -webkit-transform: translateX(110%);
+            transform: translateX(110%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes slidein {
+  from {
+    -webkit-transform: translateX(110%);
+            transform: translateX(110%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slideout {
+  from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(110%);
+            transform: translateX(110%);
+  }
+}
+
+@keyframes slideout {
+  from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(110%);
+            transform: translateX(110%);
+  }
+}
+
+.translate-x-110 {
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+}
+
+.slideIn {
+  -webkit-animation: slidein;
+          animation: slidein;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.slideOut {
+  -webkit-animation: slideout;
+          animation: slideout;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 /*# sourceMappingURL=global.css.map */

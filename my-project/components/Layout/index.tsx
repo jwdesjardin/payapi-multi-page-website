@@ -11,14 +11,14 @@ const Layout = ({
 	title?: string
 }): ReactElement => {
 	return (
-		<>
+		<div className='relative overflow-x-hidden w-screen'>
 			<Head>
 				<title>{title}</title>
 			</Head>
 			<Navbar></Navbar>
 			<main>{children}</main>
 			<Footer></Footer>
-		</>
+		</div>
 	)
 }
 
