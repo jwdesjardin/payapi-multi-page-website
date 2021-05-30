@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import Checkbox from '../components/Checkbox'
+import Heading from '../components/Heading'
 
 export default function Home() {
 	return (
@@ -28,6 +29,10 @@ export default function Home() {
 						<Checkbox></Checkbox>
 					</div>
 				</div>
+
+				<Heading size='md' type='h3'>
+					Yehllow
+				</Heading>
 			</main>
 		</div>
 	)
