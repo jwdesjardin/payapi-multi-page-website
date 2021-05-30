@@ -2,10 +2,10 @@ import React from 'react'
 
 const EmailCapture = () => {
 	const inputStyles =
-		'py-3 px-6 rounded-full md:rounded-r-none mb-4 md:mb-0 shadow-lg md:shadow-none   '
+		'py-3 px-8 rounded-full md:rounded-r-none mb-4 md:mb-0 shadow-lg md:shadow-none   '
 	const genericInput = 'focus:outline-none bg-white-100 font-bold text-md w-full '
 	return (
-		<div className='my-20 shadow-none md:shadow-lg rounded-full inline-flex items-center justify-between md:max-w-md flex-wrap md:flex-nowrap '>
+		<div className='my-20 shadow-none md:shadow-lg rounded-full inline-flex items-center justify-between max-w-md flex-wrap md:flex-nowrap '>
 			<input
 				type='text'
 				className={inputStyles + ' ' + genericInput}

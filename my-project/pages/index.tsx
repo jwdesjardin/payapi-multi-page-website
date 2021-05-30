@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
+import BrandGrid from '../components/BrandGrid'
 import Checkbox from '../components/Checkbox'
 import EmailCapture from '../components/EmailCapture'
 import Heading from '../components/Heading'
@@ -34,6 +35,8 @@ export default function Home() {
 				</Heading>
 
 				<EmailCapture></EmailCapture>
+				<BrandGrid textColor='light'></BrandGrid>
+				<div className='mb-20'></div>
 			</main>
 		</div>
 	)
