@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React, { ReactElement, ReactNode } from 'react'
+import NavbarTransition from '../NavbarTransition'
 import Footer from './Footer'
 import Navbar from './Navbar'
 
@@ -11,14 +12,14 @@ const Layout = ({
 	title?: string
 }): ReactElement => {
 	return (
-		<div className='relative overflow-x-hidden'>
+		<>
 			<Head>
 				<title>{title}</title>
 			</Head>
-			<Navbar></Navbar>
+			<NavbarTransition></NavbarTransition>
 			<main>{children}</main>
 			<Footer></Footer>
-		</div>
+		</>
 	)
 }
 

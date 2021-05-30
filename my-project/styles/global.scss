@@ -8,6 +8,8 @@
 	html,
 	body {
 		@apply text-blue-700 bg-white-200;
+		// used for iphone x bug that was showing off screen element
+		// not necessary when using headless ui Transition
 		width: 100%;
 		height: 100%;
 		margin: 0px;
