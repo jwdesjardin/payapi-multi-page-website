@@ -15,9 +15,7 @@ export default function Home() {
 				<button disabled className='primary-button'>
 					Schedule a demo
 				</button>
-				<button disabled className='button-light'>
-					Submit Query
-				</button>
+				<button className='button-light'>Submit Query</button>
 				<div className='  bg-blue-900'>
 					<button className='button-dark'>About Us</button>
 				</div>

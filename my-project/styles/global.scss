@@ -4,13 +4,19 @@
 
 @tailwind utilities;
 
+@layer base {
+	body {
+		@apply text-blue-700 bg-white-200;
+	}
+}
+
 @layer components {
 	.primary-button {
 		@apply bg-pink-700 hover:bg-pink-400  hover:border-pink-400  disabled:bg-opacity-50 text-white-100 text-md font-bold py-4 px-6 rounded-full leading-none;
 	}
 
 	.button-light {
-		@apply bg-white-100 hover:bg-blue-700 border-2 border-blue-700 text-blue-700 hover:text-white-100 text-md font-bold py-4 px-6 rounded-full leading-none disabled:border-opacity-50 disabled:text-opacity-50;
+		@apply bg-white-200 hover:bg-blue-700 border-2 border-blue-700 text-blue-700 hover:text-white-100 text-md font-bold py-4 px-6 rounded-full leading-none disabled:border-opacity-50 disabled:text-opacity-50;
 	}
 
 	.button-dark {
@@ -18,7 +24,7 @@
 	}
 
 	.text-input {
-		@apply border-b border-blue-500 pb-4 px-4 focus:outline-none focus:border-blue-700 focus:border-b-2 text-md text-blue-700;
+		@apply bg-white-200 border-b border-blue-500 pb-4 px-4 focus:outline-none focus:border-blue-700 focus:border-b-2 text-md text-blue-700;
 	}
 }
 
@@ -27,6 +33,9 @@
 		@apply border-red-500 text-red-500 placeholder-red-500 focus:border-red-500;
 	}
 	// typography
+	.text {
+		@apply text-md leading-loose;
+	}
 }
 
 input:checked + div {

@@ -37,11 +37,13 @@ module.exports = {
 			},
 			white: {
 				100: '#FBFCFE',
+				200: '#EDF3F8',
 			},
 			grey: {
 				200: '#ededed',
 				400: '#979797',
 			},
+			transparent: {},
 		},
 	},
 	variants: {
