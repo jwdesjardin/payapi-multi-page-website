@@ -11,7 +11,7 @@ const Layout = ({
 	title?: string
 }): ReactElement => {
 	return (
-		<div className='relative overflow-x-hidden w-screen'>
+		<div className='relative overflow-x-hidden'>
 			<Head>
 				<title>{title}</title>
 			</Head>

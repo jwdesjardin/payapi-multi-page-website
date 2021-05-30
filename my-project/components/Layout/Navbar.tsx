@@ -11,13 +11,14 @@ const Navbar = () => {
 		const div = e.currentTarget as HTMLDivElement
 		const menu = div.parentElement
 		menu.classList.remove('slideIn')
-		menu.classList.add('slideOut', 'translate-x-110')
+		menu.classList.add('slideOut', 'translate-x-full')
 		console.log(menu)
 	}
+
 	const openMenu = (e) => {
 		const div = e.currentTarget as HTMLDivElement
 		const menu = div.parentElement.lastElementChild
-		menu.classList.remove('slideOut', 'translate-x-110')
+		menu.classList.remove('slideOut', 'translate-x-full')
 		menu.classList.add('slideIn')
 		console.log(menu)
 	}
@@ -48,7 +49,7 @@ const Navbar = () => {
 
 			{/* Menu */}
 
-			<div className='absolute right-0 top-0 h-screen w-10/12 bg-blue-900 md:hidden translate-x-110 '>
+			<div className='absolute right-0 top-0 h-screen w-10/12 bg-blue-900 md:hidden transform translate-x-full'>
 				<div className='mt-12 mr-8 flex justify-end' onClick={closeMenu}>
 					<CloseSVG />
 				</div>
