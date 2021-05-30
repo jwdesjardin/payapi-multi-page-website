@@ -1,17 +1,18 @@
 import Head from 'next/head'
 import React from 'react'
 import Checkbox from '../components/Checkbox'
+import EmailCapture from '../components/EmailCapture'
 import Heading from '../components/Heading'
 
 export default function Home() {
 	return (
-		<div className='flex flex-col items-center justify-center min-h-screen py-2'>
+		<div className=''>
 			<Head>
 				<title>Create Next App</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<main className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center'>
+			<main className=''>
 				<button disabled className='primary-button'>
 					Schedule a demo
 				</button>
@@ -28,9 +29,11 @@ export default function Home() {
 					</div>
 				</div>
 
-				<Heading size='md' type='h3'>
+				<Heading size='md' type='h2'>
 					Yehllow
 				</Heading>
+
+				<EmailCapture></EmailCapture>
 			</main>
 		</div>
 	)

@@ -8,7 +8,7 @@
 }
 
 @layer components {
-  .primary-button {
+  .button-primary {
     @apply bg-pink-700 hover:bg-pink-400  hover:border-pink-400  disabled:bg-opacity-50 text-white-100 text-md font-bold py-4 px-6 rounded-full leading-none;
   }
   .button-light {
