@@ -9,16 +9,16 @@
 
 @layer components {
   .button-primary {
-    @apply bg-pink-700 hover:bg-pink-400  hover:border-pink-400  disabled:bg-opacity-50 text-white-100 text-md font-bold py-4 px-6 rounded-full leading-none;
+    @apply bg-pink-700 hover:bg-pink-400  hover:border-pink-400  disabled:bg-opacity-50 text-white-100 text-md font-bold py-4 px-6 rounded-full leading-none transition-all;
   }
   .button-light {
-    @apply bg-white-200 hover:bg-blue-700 border-2 border-blue-700 text-blue-700 hover:text-white-100 text-md font-bold py-4 px-6 rounded-full leading-none disabled:border-opacity-50 disabled:text-opacity-50;
+    @apply bg-white-200 hover:bg-blue-700 border-2 border-blue-700 text-blue-700 hover:text-white-100 text-md font-bold py-4 px-6 rounded-full leading-none disabled:border-opacity-50 disabled:text-opacity-50 transition-all;
   }
   .button-dark {
-    @apply bg-blue-900 hover:bg-white-100 border-2 border-white-100 text-white-100 hover:text-blue-900 text-md font-bold py-4 px-8 rounded-full leading-none disabled:border-opacity-50 disabled:text-opacity-50;
+    @apply bg-blue-900 hover:bg-white-100 border-2 border-white-100 text-white-100 hover:text-blue-900 text-md font-bold py-4 px-8 rounded-full leading-none disabled:border-opacity-50 disabled:text-opacity-50 transition-all;
   }
   .text-input {
-    @apply bg-white-200 border-b border-blue-500 pb-4 px-4 focus:outline-none focus:border-blue-700 focus:border-b-2 text-md text-blue-700;
+    @apply bg-white-200 border-b border-blue-500 pb-4 px-4 focus:outline-none focus:border-blue-700 focus:border-b-2 text-md text-blue-700 transition-all;
   }
 }
 
@@ -28,6 +28,9 @@
   }
   .text {
     @apply text-md leading-loose;
+  }
+  .content-container {
+    @apply mx-6 md:mx-10  xl:max-w-screen-xl xl:mx-auto;
   }
 }
 

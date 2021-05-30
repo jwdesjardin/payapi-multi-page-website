@@ -1,7 +1,7 @@
 import React from 'react'
 
 const BrandGrid = ({ textColor }: { textColor: 'dark' | 'light' }) => {
-	const dark = 'text-blue-500'
+	const dark = 'text-blue-700'
 	const light = 'text-white-100'
 	const gridStyles =
 		'grid grid-cols-2 md:grid-cols-3 gap-y-10 md:gap-y-12 items-center place-items-center'
