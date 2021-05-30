@@ -1,29 +1,16 @@
 import React from 'react'
 import Link from 'next/link'
+import { Transition } from '@headlessui/react'
 import { CloseSVG, HamburgerSVG, LogoSVG } from '../Icons'
 
-const Navbar = () => {
+const NavbarTransition = () => {
+	const [menu, toggleMenu] = React.useState(false)
+
 	const linkHoverEffect = 'hover:opacity-100 opacity-60 transition-all'
 
-	const closeMenu = (e) => {
-		const div = e.currentTarget as HTMLDivElement
-		const menu = div.parentElement
-		menu.classList.remove('slideIn')
-		menu.classList.add('slideOut', 'translate-x-full')
-		console.log(menu)
-	}
-
-	const openMenu = (e) => {
-		const div = e.currentTarget as HTMLDivElement
-		const menu = div.parentElement.lastElementChild
-		menu.classList.remove('slideOut', 'translate-x-full')
-		menu.classList.add('slideIn')
-		console.log(menu)
-	}
-
 	return (
-		<header className='flex items-center justify-between content-container py-6 md:py-10'>
-			<div className='flex items-center space-x-12 xl:space-x-20'>
+		<header className='flex items-center justify-between content-container py-6 md:py-10 '>
+			<div className='flex items-center space-x-12 xl:space-x-20 text-blue-700'>
 				<LogoSVG></LogoSVG>
 				<div className='hidden md:flex space-x-8 xl:space-x-12 font-bold'>
 					<Link href='/pricing'>
@@ -38,7 +25,7 @@ const Navbar = () => {
 				</div>
 			</div>
 
-			<div className='md:hidden' onClick={openMenu}>
+			<div className='md:hidden' onClick={() => toggleMenu(true)}>
 				<HamburgerSVG />
 			</div>
 			<div className='hidden md:block'>
@@ -46,9 +33,17 @@ const Navbar = () => {
 			</div>
 
 			{/* Menu */}
-
-			<div className='absolute right-0 top-0 h-screen w-10/12 bg-blue-900 md:hidden transform translate-x-full'>
-				<div className='mt-12 mr-8 flex justify-end' onClick={closeMenu}>
+			<Transition
+				show={menu}
+				enter='transition ease-in-out duration-700 transform'
+				enterFrom='translate-x-full'
+				enterTo='translate-x-0'
+				leave='transition ease-in-out duration-700 transform'
+				leaveFrom='translate-x-0'
+				leaveTo='translate-x-full'
+				className='absolute right-0 top-0 h-screen w-10/12 bg-blue-900 md:hidden'
+			>
+				<div className='mt-12 mr-8 flex justify-end' onClick={() => toggleMenu(false)}>
 					<CloseSVG />
 				</div>
 				<div className='border-t border-white-100 border-opacity-60 mx-6 flex-col flex items-center text-[20px] text-white-100 mt-6 '>
@@ -70,9 +65,9 @@ const Navbar = () => {
 						<button className='button-primary w-full'>Schedule a Demo</button>
 					</Link>
 				</div>
-			</div>
+			</Transition>
 		</header>
 	)
 }
 
-export default Navbar
+export default NavbarTransition

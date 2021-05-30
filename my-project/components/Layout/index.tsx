@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React, { ReactElement, ReactNode } from 'react'
-import NavbarTransition from '../NavbarTransition'
+import NavbarTransition from './NavbarTransition'
 import Footer from './Footer'
 import Navbar from './Navbar'
 
