@@ -12,14 +12,15 @@ const Layout = ({
 	title?: string
 }): ReactElement => {
 	return (
-		<>
+		<div className='relative overflow-x-hidden'>
 			<Head>
 				<title>{title}</title>
 			</Head>
 			<NavbarTransition></NavbarTransition>
+			{/* <Navbar></Navbar> */}
 			<main>{children}</main>
 			<Footer></Footer>
-		</>
+		</div>
 	)
 }
 

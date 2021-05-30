@@ -8,12 +8,8 @@
 	html,
 	body {
 		@apply text-blue-700 bg-white-200;
-		// used for iphone x bug that was showing off screen element
-		// not necessary when using headless ui Transition
-		width: 100%;
+		// needed to fix the overflow issue when translating offscreen elements in manual keyframe animations
 		height: 100%;
-		margin: 0px;
-		padding: 0px;
 		overflow-x: hidden;
 	}
 }
@@ -80,10 +76,6 @@ input:checked + div svg {
 	to {
 		transform: translateX(110%);
 	}
-}
-
-.translate-x-110 {
-	transform: translateX(120%);
 }
 
 .slideIn {

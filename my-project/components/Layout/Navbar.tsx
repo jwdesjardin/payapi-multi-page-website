@@ -23,7 +23,7 @@ const Navbar = () => {
 	}
 
 	return (
-		<header className='flex items-center justify-between content-container py-6 md:py-10 '>
+		<header className='flex items-center justify-between content-container py-6 md:py-10'>
 			<div className='flex items-center space-x-12 xl:space-x-20'>
 				<LogoSVG></LogoSVG>
 				<div className='hidden md:flex space-x-8 xl:space-x-12 font-bold'>
