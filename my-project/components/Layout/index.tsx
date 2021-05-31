@@ -3,6 +3,7 @@ import React, { ReactElement, ReactNode } from 'react'
 import NavbarTransition from './NavbarTransition'
 import Footer from './Footer'
 import Navbar from './Navbar'
+import Ready from './Ready'
 
 const Layout = ({
 	children,
@@ -18,7 +19,10 @@ const Layout = ({
 			</Head>
 			<NavbarTransition></NavbarTransition>
 			{/* <Navbar></Navbar> */}
-			<main>{children}</main>
+			<main>
+				{children}
+				<Ready></Ready>
+			</main>
 			<Footer></Footer>
 		</div>
 	)

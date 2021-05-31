@@ -4,9 +4,10 @@ interface Props {
 	size: 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 	type: 'h1' | 'h2' | 'h3' | 'h4'
 	children: React.ReactNode
+	className?: string
 }
 
-const Heading = ({ size, type, children }: Props) => {
+const Heading = ({ size, type, children, className }: Props) => {
 	const HeadingTypes = {
 		sm: 'text-2xl font-serif',
 		md: 'text-3xl font-serif',
@@ -15,7 +16,11 @@ const Heading = ({ size, type, children }: Props) => {
 		xxl: 'text-6xl font-serif',
 	}
 
-	const heading = createElement(type, { className: HeadingTypes[size] }, children)
+	const heading = createElement(
+		type,
+		{ className: HeadingTypes[size] + `${className ? ' ' + className : ''}` },
+		children
+	)
 	return heading
 }
 
