@@ -42,7 +42,7 @@ const NavbarTransition = () => {
 					leave='transition ease-in-out duration-700 transform'
 					leaveFrom='translate-x-0'
 					leaveTo='translate-x-full'
-					className='absolute right-0 top-0 h-screen w-10/12 bg-blue-900 md:hidden z-30'
+					className='fixed right-0 top-0 h-screen w-10/12 bg-blue-900 md:hidden z-30'
 				>
 					<div
 						className='mt-12 mr-8 flex justify-end cursor-pointer'
