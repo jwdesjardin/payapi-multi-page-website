@@ -137,8 +137,9 @@ export const IconCheckSVG = () => {
 export const BgCircleSVG = () => {
 	return (
 		<svg
-			width='780'
-			height='780'
+			// width='780'
+			// height='780'
+			viewBox='0 0 780 780'
 			xmlns='http://www.w3.org/2000/svg'
 			xmlnsXlink='http://www.w3.org/1999/xlink'
 		>
