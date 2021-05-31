@@ -106,4 +106,12 @@ input:checked + div svg {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
+
+.bgz {
+  z-index: 0;
+}
+
+.navbr {
+  z-index: 20;
+}
 /*# sourceMappingURL=global.css.map */

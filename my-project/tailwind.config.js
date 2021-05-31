@@ -45,6 +45,11 @@ module.exports = {
 			},
 			transparent: {},
 		},
+		extend: {
+			zIndex: {
+				'-1': '-1',
+			},
+		},
 	},
 	variants: {
 		extend: {},

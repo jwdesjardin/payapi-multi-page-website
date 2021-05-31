@@ -8,7 +8,7 @@ import Layout from '../components/Layout'
 export default function Home() {
 	return (
 		<Layout title='Homepage'>
-			<div className='absolute w-full top-0 right-0 max-w-2xl  transform -translate-y-3/4 xl:-translate-y-1/4 xl:translate-x-1/4 scale-150 md:scale-125 xl:scale-125'>
+			<div className='absolute w-full top-0 right-0 max-w-2xl  transform -translate-y-3/4 xl:-translate-y-1/4 xl:translate-x-1/4 scale-150 md:scale-125 xl:scale-125 bgz'>
 				<img src='/shared/desktop/bg-pattern-circle.svg' />
 			</div>
 
