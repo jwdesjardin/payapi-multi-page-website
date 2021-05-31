@@ -4,10 +4,11 @@ import { BgCircleSVG, FacebookSVG, LinkedinSVG, LogoSVG, TwitterSVG } from '../I
 
 const Footer = () => {
 	const linkHoverEffect = 'hover:opacity-100 opacity-60 transition-all'
+	const socialHoverEffect = 'hover:text-pink-700 text-white-100 transition-all'
 	return (
 		<footer className=' bg-blue-900 text-white-100 pt-8 pb-14 md:py-8 relative overflow-hidden '>
 			{/* BG IMAGE */}
-			<div className='overflow-hidden absolute -right-1/4 top-1/2 md:-top-1/2 md:-right-1/2 xl:-right-1/4  '>
+			<div className='overflow-hidden absolute -right-1/4 top-1/2 md:-top-1/2 md:-right-1/2 xl:-right-1/4 z-0'>
 				<BgCircleSVG></BgCircleSVG>
 			</div>
 
@@ -29,16 +30,19 @@ const Footer = () => {
 						</Link>
 					</div>
 				</div>
-				<div className='flex space-x-6'>
-					<a href='https://www.facebook.com'>
+				<div className='flex space-x-6 z-20'>
+					<a
+						href='https://www.facebook.com'
+						className='hover:text-pink-700 text-white-100 transition-all'
+					>
 						<FacebookSVG></FacebookSVG>
 					</a>
 
-					<a href='https://www.twitter.com'>
+					<a href='https://www.twitter.com' className={socialHoverEffect}>
 						<TwitterSVG></TwitterSVG>
 					</a>
 
-					<a href='https://www.linkedin.com'>
+					<a href='https://www.linkedin.com' className={socialHoverEffect}>
 						<LinkedinSVG></LinkedinSVG>
 					</a>
 				</div>

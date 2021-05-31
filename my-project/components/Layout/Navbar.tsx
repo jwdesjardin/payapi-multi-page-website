@@ -38,7 +38,7 @@ const Navbar = () => {
 				</div>
 			</div>
 
-			<div className='md:hidden' onClick={openMenu}>
+			<div className='md:hidden cursor-pointer' onClick={openMenu}>
 				<HamburgerSVG />
 			</div>
 			<div className='hidden md:block'>
@@ -48,7 +48,7 @@ const Navbar = () => {
 			{/* Menu */}
 
 			<div className='absolute right-0 top-0 h-screen w-10/12 bg-blue-900 md:hidden transform translate-x-full'>
-				<div className='mt-12 mr-8 flex justify-end' onClick={closeMenu}>
+				<div className='mt-12 mr-8 flex justify-end cursor-pointer' onClick={closeMenu}>
 					<CloseSVG />
 				</div>
 				<div className='border-t border-white-100 border-opacity-60 mx-6 flex-col flex items-center text-[20px] text-white-100 mt-6 '>

@@ -25,7 +25,7 @@ const NavbarTransition = () => {
 				</div>
 			</div>
 
-			<div className='md:hidden' onClick={() => toggleMenu(true)}>
+			<div className='md:hidden cursor-pointer' onClick={() => toggleMenu(true)}>
 				<HamburgerSVG />
 			</div>
 			<div className='hidden md:block'>
@@ -41,9 +41,12 @@ const NavbarTransition = () => {
 				leave='transition ease-in-out duration-700 transform'
 				leaveFrom='translate-x-0'
 				leaveTo='translate-x-full'
-				className='absolute right-0 top-0 h-screen w-10/12 bg-blue-900 md:hidden'
+				className='absolute right-0 top-0 h-screen w-10/12 bg-blue-900 md:hidden z-30'
 			>
-				<div className='mt-12 mr-8 flex justify-end' onClick={() => toggleMenu(false)}>
+				<div
+					className='mt-12 mr-8 flex justify-end cursor-pointer'
+					onClick={() => toggleMenu(false)}
+				>
 					<CloseSVG />
 				</div>
 				<div className='border-t border-white-100 border-opacity-60 mx-6 flex-col flex items-center text-[20px] text-white-100 mt-6 '>
