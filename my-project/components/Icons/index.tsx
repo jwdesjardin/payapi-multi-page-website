@@ -143,13 +143,13 @@ export const BgCircleSVG = () => {
 			xmlnsXlink='http://www.w3.org/1999/xlink'
 		>
 			<defs>
-				<circle id='a' cx='390' cy='390' r='390' />
-				<circle id='b' cx='390' cy='390' r='390' />
+				<circle id='a_yo' cx='390' cy='390' r='390' />
+				<circle id='b_yo' cx='390' cy='390' r='390' />
 			</defs>
-			{/* <g fill='#36536B' fillRule='evenodd' opacity='.15'> */}
-			<g fill='#ffffff' fillRule='evenodd' opacity='.15'>
-				<use xlinkHref='#a' />
-				<use xlinkHref='#b' />
+			<g fill='#36536B' fillRule='evenodd' opacity='.15'>
+				{/* <g fill='#ffffff' fillRule='evenodd' opacity='.15'> */}
+				<use xlinkHref='#a_yo' />
+				<use xlinkHref='#b_yo' />
 			</g>
 		</svg>
 	)
