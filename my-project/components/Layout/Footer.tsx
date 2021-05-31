@@ -8,7 +8,7 @@ const Footer = () => {
 	return (
 		<footer className=' bg-blue-900 text-white-100 pt-8 pb-14 md:py-8 relative overflow-hidden '>
 			{/* BG IMAGE */}
-			<div className='overflow-hidden absolute -right-1/4 top-1/2 md:-top-1/2 md:-right-1/2 xl:-right-1/4 z-0'>
+			<div className='overflow-hidden absolute -right-1/4 top-1/2 md:-top-1/2 md:-right-1/2 xl:-right-1/4'>
 				<BgCircleSVG></BgCircleSVG>
 			</div>
 
@@ -31,10 +31,7 @@ const Footer = () => {
 					</div>
 				</div>
 				<div className='flex space-x-6 z-20'>
-					<a
-						href='https://www.facebook.com'
-						className='hover:text-pink-700 text-white-100 transition-all'
-					>
+					<a href='https://www.facebook.com' className={socialHoverEffect}>
 						<FacebookSVG></FacebookSVG>
 					</a>
 
