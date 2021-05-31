@@ -1,4 +1,5 @@
 import React from 'react'
+import BrandGrid from '../components/BrandGrid'
 import EmailCapture from '../components/EmailCapture'
 import { BgCircleSVG } from '../components/Icons'
 import { HeroImage } from '../components/Icons/illustrations'
@@ -13,13 +14,14 @@ export default function Home() {
 			</div>
 
 			<HeroSection />
+			<BrandSection />
 		</Layout>
 	)
 }
 
 const HeroSection = () => {
 	return (
-		<div className='flex flex-col items-center xl:items-start justify-center content-container relative pb-20 md:pb-24'>
+		<section className='flex flex-col items-center xl:items-start justify-center content-container relative pb-20 md:pb-24'>
 			<div className='ml-8 w-52 md:w-72 xl:w-96 absolute top-0 xl:right-0'>
 				{/* <img src='/home/desktop/mockups.svg' alt='mockups' /> */}
 				<HeroImage></HeroImage>
@@ -32,10 +34,31 @@ const HeroSection = () => {
 				<div className='mb-6'>
 					<EmailCapture></EmailCapture>
 				</div>
-				<p className='ml-10'>
+				<p className='xl:ml-10'>
 					Have any questions? <span className='font-bold'>Contact Us</span>
 				</p>
 			</div>
-		</div>
+		</section>
+	)
+}
+
+const BrandSection = () => {
+	return (
+		<section className='bg-blue-900 text-white-100 py-20 md:py-24 '>
+			<div className='content-container flex flex-col xl:flex-row-reverse items-center justify-center'>
+				<div className='mb-16 xl:mb-0 max-w-xl xl:max-w-lg px-6 md:px-0 md:mx-auto xl:mr-0 w-full xl:w-1/2 '>
+					<BrandGrid></BrandGrid>
+				</div>
+				<div className='text-center xl:text-left max-w-md  xl:w-1/2 '>
+					<h2 className='text-3xl md:text-4xl mb-4 xl:mb-6 font-serif'>Who we work with</h2>
+					<p className='text mb-16 xl:mb-8 opacity-70'>
+						Today, millions of people around the world have successfully connected their accounts to
+						apps they love using our API. We provide developers with the tools they need to create
+						easy and accessible experiences for their users.
+					</p>
+					<button className='button-dark'>About Us</button>
+				</div>
+			</div>
+		</section>
 	)
 }
