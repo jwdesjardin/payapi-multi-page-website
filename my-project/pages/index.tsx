@@ -8,24 +8,30 @@ import Layout from '../components/Layout'
 export default function Home() {
 	return (
 		<Layout title='Homepage'>
-			{/* Hero */}
-			<div className='flex flex-col items-center justify-center content-container relative pb-20'>
-				<div className='ml-8 w-52 absolute top-0'>
-					{/* <img src='/home/desktop/mockups.svg' alt='mockups' /> */}
-					<HeroImage></HeroImage>
-				</div>
-				<div className='flex flex-col items-center justify-center pt-[300px]'>
-					<h1 className='text-3xl leading-tight text-center font-serif mb-6'>
-						Start building with our APIs for absolutely free.
-					</h1>
-					<div className='mb-6'>
-						<EmailCapture></EmailCapture>
-					</div>
-					<p className=''>
-						Have any questions? <span className='font-bold'>Contact Us</span>
-					</p>
-				</div>
-			</div>
+			<HeroSection />
 		</Layout>
+	)
+}
+
+const HeroSection = () => {
+	return (
+		<div className='flex flex-col items-center xl:items-start justify-center content-container relative pb-20 md:pb-24'>
+			<div className='ml-8 w-52 md:w-72 xl:w-96 absolute top-0 xl:right-0'>
+				{/* <img src='/home/desktop/mockups.svg' alt='mockups' /> */}
+				<HeroImage></HeroImage>
+			</div>
+
+			<div className='flex flex-col items-center xl:items-start justify-center pt-[300px] md:pt-[430px] xl:pt-24 md:max-w-lg xl:max-w-xl'>
+				<h1 className='text-3xl md:text-4xl xl:text-6xl leading- xl:leading-none text-center xl:text-left font-serif mb-6 md:mb-8 xl:mb-10'>
+					Start building with our APIs for absolutely free.
+				</h1>
+				<div className='mb-6'>
+					<EmailCapture></EmailCapture>
+				</div>
+				<p className='ml-10'>
+					Have any questions? <span className='font-bold'>Contact Us</span>
+				</p>
+			</div>
+		</div>
 	)
 }
