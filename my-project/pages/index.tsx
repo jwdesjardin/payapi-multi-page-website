@@ -3,8 +3,9 @@ import BrandGrid from '../components/BrandGrid'
 import EmailCapture from '../components/EmailCapture'
 import { BgCircleSVG } from '../components/Icons'
 import { HeroImage } from '../components/Icons/illustrations'
-
+import { EasyIllustration } from '../components/Icons/illustrations'
 import Layout from '../components/Layout'
+import { FocusTrap } from '@headlessui/react'
 
 export default function Home() {
 	return (
@@ -15,6 +16,7 @@ export default function Home() {
 
 			<HeroSection />
 			<BrandSection />
+			<EasySection />
 		</Layout>
 	)
 }
@@ -28,7 +30,7 @@ const HeroSection = () => {
 			</div>
 
 			<div className='flex flex-col items-center xl:items-start justify-center pt-[300px] md:pt-[430px] xl:pt-24 md:max-w-lg xl:max-w-xl'>
-				<h1 className='text-3xl md:text-4xl xl:text-6xl leading- xl:leading-none text-center xl:text-left font-serif mb-6 md:mb-8 xl:mb-10'>
+				<h1 className='text-3xl md:text-4xl xl:text-6xl leading-none font-bold xl:leading-none text-center xl:text-left font-serif mb-6 md:mb-8 xl:mb-10'>
 					Start building with our APIs for absolutely free.
 				</h1>
 				<div className='mb-6'>
@@ -54,7 +56,9 @@ const BrandSection = () => {
 					<BrandGrid></BrandGrid>
 				</div>
 				<div className='text-center xl:text-left max-w-md  xl:w-1/2 '>
-					<h2 className='text-3xl md:text-4xl mb-4 xl:mb-6 font-serif'>Who we work with</h2>
+					<h2 className='text-3xl md:text-4xl font-bold mb-4 xl:mb-6 font-serif'>
+						Who we work with
+					</h2>
 					<p className='text mb-16 xl:mb-8 opacity-70'>
 						Today, millions of people around the world have successfully connected their accounts to
 						apps they love using our API. We provide developers with the tools they need to create
@@ -62,6 +66,28 @@ const BrandSection = () => {
 					</p>
 					<button className='button-dark'>About Us</button>
 				</div>
+			</div>
+		</section>
+	)
+}
+
+const EasySection = () => {
+	return (
+		<section className='content-container relative pb-20 xl:flex xl:flex-row-reverse'>
+			{/* IMAGE BOX */}
+			<div className='absolute transform top-6 md:top-10 xl:top-36 -left-8 md:left-12 xl:left-0  w-[130%] md:w-[90%] xl:w-1/2'>
+				{/* <img src='/home/desktop/easy.svg' alt='easy to implement illustration' /> */}
+				{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
+				<EasyIllustration></EasyIllustration>
+			</div>
+
+			{/* CONTENT BOX */}
+			<div className='pt-72 md:pt-[440px] xl:pt-[210px] text-center xl:text-left max-w-xl xl:max-w-lg '>
+				<h2 className='text-3xl md:text-4xl font-serif font-bold mb-6'>Easy to implement</h2>
+				<p className='text'>
+					Our API comes with just a few lines of code. You’ll be up and running in no time. We built
+					our documentation page to integrate payments functionality with ease.
+				</p>
 			</div>
 		</section>
 	)
