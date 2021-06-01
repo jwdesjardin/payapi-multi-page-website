@@ -201,7 +201,13 @@ export const EasyIllustration = () => {
 					<circle fill='#527695' cx='30.4' cy='8' r='8' />
 					<circle fill='#36536B' cx='52.8' cy='8' r='8' />
 				</g>
-				<text fontFamily='Roboto Mono' fontSize='13' fill='#FBFCFE' transform='translate(55 55)'>
+				<text
+					xmlSpace='preserve'
+					fontFamily='Roboto Mono'
+					fontSize='13'
+					fill='#FBFCFE'
+					transform='translate(55 55)'
+				>
 					<tspan x='32' y='86'>
 						&lt;form id=&quot;form-id&quot; method=&quot;GET&quot;&gt; &lt;/form&gt;
 					</tspan>{' '}
@@ -209,11 +215,11 @@ export const EasyIllustration = () => {
 						&lt;script
 					</tspan>{' '}
 					<tspan x='32' y='126'>
-						{' '}
+						{` `}
 						src=&quot;https://loremipsum.com/api.js&quot;
 					</tspan>{' '}
 					<tspan x='32' y='146'>
-						{' '}
+						{` `}
 						data-client-name=&quot;Your Company&apos;s Name&quot;
 					</tspan>{' '}
 					<tspan x='32' y='166'>

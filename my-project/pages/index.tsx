@@ -5,7 +5,6 @@ import { BgCircleSVG } from '../components/Icons'
 import { HeroImage } from '../components/Icons/illustrations'
 import { EasyIllustration } from '../components/Icons/illustrations'
 import Layout from '../components/Layout'
-import { FocusTrap } from '@headlessui/react'
 
 export default function Home() {
 	return (
@@ -17,6 +16,7 @@ export default function Home() {
 			<HeroSection />
 			<BrandSection />
 			<EasySection />
+			<SimpleSection />
 		</Layout>
 	)
 }
@@ -98,10 +98,10 @@ const EasySection = () => {
 		<section className='content-container relative pb-20 flex flex-col items-center justify-center xl:flex-row xl:pt-32'>
 			{/* IMAGE BOX */}
 			<div className='relative w-[440px] md:w-[540px] xl:w-[600px] h-[270px] md:h-[320px] ml-8 xl:ml-0 mt-6 md:mt-12 xl:mt-0'>
-				{/* <img src='/home/desktop/easy.svg' alt='easy to implement illustration' /> */}
-				{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
 				<div className='absolute top-0 left-0 w-full transform xl:-translate-x-20 xl:-translate-y-6'>
 					<EasyIllustration></EasyIllustration>
+					{/* <img src='/home/desktop/easy.svg' alt='easy to implement illustration' /> */}
+					{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
 				</div>
 			</div>
 
@@ -111,6 +111,29 @@ const EasySection = () => {
 				<p className='text'>
 					Our API comes with just a few lines of code. You’ll be up and running in no time. We built
 					our documentation page to integrate payments functionality with ease.
+				</p>
+			</div>
+		</section>
+	)
+}
+
+const SimpleSection = () => {
+	return (
+		<section className='content-container flex xl:flex-row-reverse flex-col items-center justify-center'>
+			{/* IMAGE BOX */}
+			<div className=''>
+				<div className='w-[430px] md:w-[516px] transform translate-x-3 xl:translate-x-36'>
+					<img src='/home/desktop/simple-ui.svg' alt='simple ui illustration' />
+					{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
+				</div>
+			</div>
+
+			{/* CONTENT BOX */}
+			<div className='text-center xl:text-left transform -translate-y-6 max-w-lg xl:max-w-md'>
+				<h2 className='text-3xl md:text-4xl font-serif font-bold mb-4'>Simple UI & UX</h2>
+				<p className='text'>
+					Our pre-built form is easy to integrate in your app or website’s checkout flow and
+					designed to optimize conversion.
 				</p>
 			</div>
 		</section>
