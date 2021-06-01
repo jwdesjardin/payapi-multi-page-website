@@ -120,7 +120,12 @@ const EasySection = () => {
 
 const SimpleSection = () => {
 	return (
-		<section className='content-container flex xl:flex-row-reverse flex-col items-center justify-center xl:justify-between'>
+		<section className='content-container relative flex xl:flex-row-reverse flex-col items-center justify-center xl:justify-between'>
+			{/* BG SVG */}
+			<div className='absolute w-[780px] -right-1/2'>
+				<img src='/shared/desktop/bg-pattern-circle.svg' alt='' />
+			</div>
+
 			{/* IMAGE BOX */}
 			<div className=''>
 				<div className='w-[430px] md:w-[516px] transform translate-x-3 xl:translate-x-20'>
