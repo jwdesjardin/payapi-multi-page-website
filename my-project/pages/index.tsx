@@ -2,7 +2,7 @@ import React from 'react'
 import BrandGrid from '../components/BrandGrid'
 import EmailCapture from '../components/EmailCapture'
 import { BgCircleSVG } from '../components/Icons'
-import { HeroImage } from '../components/Icons/illustrations'
+import { HeroImage, SimpleIllustration } from '../components/Icons/illustrations'
 import { EasyIllustration } from '../components/Icons/illustrations'
 import Layout from '../components/Layout'
 
@@ -26,8 +26,8 @@ const HeroSection = () => {
 	return (
 		<section className='flex flex-col items-center xl:items-start justify-center content-container relative pb-20 md:pb-24'>
 			<div className='ml-8 w-52 md:w-72 xl:w-96 absolute top-0 xl:right-0'>
-				{/* <img src='/home/desktop/mockups.svg' alt='mockups' /> */}
-				<HeroImage></HeroImage>
+				<img src='/home/desktop/new-mockups.svg' alt='mockups' />
+				{/* <HeroImage></HeroImage> */}
 			</div>
 
 			<div className='flex flex-col items-center xl:items-start justify-center pt-[300px] md:pt-[430px] xl:pt-24 md:max-w-lg xl:max-w-xl'>
@@ -101,7 +101,7 @@ const EasySection = () => {
 			<div className='relative w-[440px] md:w-[540px] xl:w-[600px] h-[270px] md:h-[320px] ml-8 xl:ml-0 mt-6 md:mt-12 xl:mt-0'>
 				<div className='absolute top-0 left-0 w-full transform xl:-translate-x-20 xl:-translate-y-6'>
 					<EasyIllustration></EasyIllustration>
-					{/* <img src='/home/desktop/easy.svg' alt='easy to implement illustration' /> */}
+					{/* <img src='/home/desktop/new-easy.svg' alt='easy to implement illustration' /> */}
 					{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
 				</div>
 			</div>
@@ -129,7 +129,8 @@ const SimpleSection = () => {
 			{/* IMAGE BOX */}
 			<div className=''>
 				<div className='w-[430px] md:w-[516px] transform translate-x-3 xl:translate-x-20'>
-					<img src='/home/desktop/simple-ui.svg' alt='simple ui illustration' />
+					{/* <SimpleIllustration></SimpleIllustration> */}
+					<img src='/home/desktop/new-simple.svg' alt='simple ui illustration' />
 					{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
 				</div>
 			</div>
