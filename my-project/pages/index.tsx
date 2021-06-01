@@ -17,6 +17,7 @@ export default function Home() {
 			<BrandSection />
 			<EasySection />
 			<SimpleSection />
+			<InfoGrid />
 		</Layout>
 	)
 }
@@ -119,10 +120,10 @@ const EasySection = () => {
 
 const SimpleSection = () => {
 	return (
-		<section className='content-container flex xl:flex-row-reverse flex-col items-center justify-center'>
+		<section className='content-container flex xl:flex-row-reverse flex-col items-center justify-center xl:justify-between'>
 			{/* IMAGE BOX */}
 			<div className=''>
-				<div className='w-[430px] md:w-[516px] transform translate-x-3 xl:translate-x-36'>
+				<div className='w-[430px] md:w-[516px] transform translate-x-3 xl:translate-x-20'>
 					<img src='/home/desktop/simple-ui.svg' alt='simple ui illustration' />
 					{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
 				</div>
@@ -137,5 +138,55 @@ const SimpleSection = () => {
 				</p>
 			</div>
 		</section>
+	)
+}
+
+const InfoGrid = () => {
+	return (
+		<section className='content-container flex flex-col md:flex-row space-y-12 md:space-x-6 md:space-y-0 items-center md:items-start justify-between pt-20'>
+			<InfoCard
+				imgURL='/home/desktop/icon-personal-finances.svg'
+				imgAlt='personal finances icon'
+				heading='Personal Finances'
+				text='Consolidate financial data from multiple sources and categorize transactions up to 2 years
+				of history. Analyze reports to reconcile activities in your account.'
+			></InfoCard>
+			<InfoCard
+				imgURL='/home/desktop/icon-banking-and-coverage.svg'
+				imgAlt='personal finances icon'
+				heading='Banking & Coverage'
+				text='With our platform, you can speed up account onboarding and support ongoing payments 
+				for checking, savings, credit card, and brokerage accounts.'
+			></InfoCard>
+			<InfoCard
+				imgURL='/home/desktop/icon-consumer-payments.svg'
+				imgAlt='personal finances icon'
+				heading='Consumer Payments'
+				text='It’s easier to set up secure bank payments with us through a flow designed with the 
+				user experience in mind. Customers could instantly authenticate their account.'
+			></InfoCard>
+		</section>
+	)
+}
+
+const InfoCard = ({
+	imgURL,
+	imgAlt,
+	heading,
+	text,
+}: {
+	imgURL: string
+	imgAlt: string
+	heading: string
+	text: string
+}) => {
+	return (
+		<div className='max-w-[350px] text-center'>
+			<div className='flex items justify-center mb-8'>
+				<img src={imgURL} alt={imgAlt} />
+			</div>
+			<h3 className='text-sans text-[18px] font-bold mb-4'>{heading}</h3>
+			<p className='text-md font-sans leading-relaxed'>{text}</p>
+		</div>
 	)
 }
