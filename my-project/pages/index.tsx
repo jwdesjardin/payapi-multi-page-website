@@ -44,9 +44,13 @@ const HeroSection = () => {
 
 const BrandSection = () => {
 	return (
-		<section className='bg-blue-900 text-white-100 py-20 md:py-24 '>
+		<section className='bg-blue-900 text-white-100 py-20 md:py-24 relative overflow-hidden'>
+			<div className='absolute scale-150 md:scale-100 xl:scale-125 max-w-3xl w-full top-0 transform -translate-y-3/4 md:-translate-y-2/3 xl:-translate-y-1/2 xl:-translate-x-1/3 '>
+				<img src='/shared/desktop/bg-pattern-circle.svg' alt='' />
+			</div>
+
 			<div className='content-container flex flex-col xl:flex-row-reverse items-center justify-center'>
-				<div className='mb-16 xl:mb-0 max-w-xl xl:max-w-lg px-6 md:px-0 md:mx-auto xl:mr-0 w-full xl:w-1/2 '>
+				<div className='mb-16 xl:mb-0 max-w-xs md:max-w-xl xl:max-w-lg px-6 md:px-0 md:mx-auto xl:mr-0 w-full xl:w-1/2 '>
 					<BrandGrid></BrandGrid>
 				</div>
 				<div className='text-center xl:text-left max-w-md  xl:w-1/2 '>
