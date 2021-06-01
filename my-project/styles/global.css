@@ -110,4 +110,8 @@ input:checked + div svg {
 .easySVG {
   font-family: 'Roboto Mono', monospace;
 }
+
+.bgTOP {
+  top: -500px;
+}
 /*# sourceMappingURL=global.css.map */

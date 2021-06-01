@@ -1,17 +1,19 @@
 import React from 'react'
 import BrandGrid from '../components/BrandGrid'
 import EmailCapture from '../components/EmailCapture'
-import { BgCircleSVG } from '../components/Icons'
-import { HeroImage, SimpleIllustration } from '../components/Icons/illustrations'
+
 import { EasyIllustration } from '../components/Icons/illustrations'
 import Layout from '../components/Layout'
 
 export default function Home() {
 	return (
 		<Layout title='Homepage'>
-			<div className='absolute w-full top-0 right-0 xl:max-w-2xl transform -translate-y-3/4 xl:-translate-y-1/4 xl:translate-x-1/4 scale-150 md:scale-125'>
-				<img src='/shared/desktop/bg-pattern-circle.svg' />
+			<div className='absolute top-0 left-1/2 transform -translate-x-1/2 xl:translate-x-32 -translate-y-2/3  md:-translate-y-3/4 xl:-translate-y-1/4 md:scale-125 xl:scale-100'>
+				<object data='/shared/desktop/bg-pattern-circle.svg' />
 			</div>
+			{/* <div className='absolute top-0 right-0 xl:max-w-2xl transform -translate-y-3/4 xl:-translate-y-1/4 xl:translate-x-1/4 scale-150 md:scale-125'>
+				<object data='/shared/desktop/bg-pattern-circle.svg' />
+			</div> */}
 
 			<HeroSection />
 			<BrandSection />
@@ -122,7 +124,7 @@ const SimpleSection = () => {
 	return (
 		<section className='content-container relative flex xl:flex-row-reverse flex-col items-center justify-center xl:justify-between'>
 			{/* BG SVG */}
-			<div className='opacity-0 xl:opacity-100 absolute w-[780px] -right-1/2'>
+			<div className='opacity-0 xl:opacity-100 absolute -right-1/2'>
 				<img src='/shared/desktop/bg-pattern-circle.svg' alt='' />
 			</div>
 
