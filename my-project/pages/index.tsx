@@ -71,18 +71,42 @@ const BrandSection = () => {
 	)
 }
 
+// const EasySection = () => {
+// 	return (
+// 		<section className='content-container relative pb-20 xl:flex xl:flex-row-reverse'>
+// 			{/* IMAGE BOX */}
+// 			<div className='absolute transform top-6 md:top-10 xl:top-36 -left-8 md:left-12 xl:left-0  w-[130%] md:w-[90%] xl:w-1/2'>
+// 				{/* <img src='/home/desktop/easy.svg' alt='easy to implement illustration' /> */}
+// 				{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
+// 				<EasyIllustration></EasyIllustration>
+// 			</div>
+
+// 			{/* CONTENT BOX */}
+// 			<div className='pt-72 md:pt-[440px] xl:pt-[210px] text-center xl:text-left max-w-xl xl:max-w-lg '>
+// 				<h2 className='text-3xl md:text-4xl font-serif font-bold mb-6'>Easy to implement</h2>
+// 				<p className='text'>
+// 					Our API comes with just a few lines of code. You’ll be up and running in no time. We built
+// 					our documentation page to integrate payments functionality with ease.
+// 				</p>
+// 			</div>
+// 		</section>
+// 	)
+// }
+
 const EasySection = () => {
 	return (
-		<section className='content-container relative pb-20 xl:flex xl:flex-row-reverse'>
+		<section className='content-container relative pb-20 flex flex-col items-center justify-center xl:flex-row xl:pt-32'>
 			{/* IMAGE BOX */}
-			<div className='absolute transform top-6 md:top-10 xl:top-36 -left-8 md:left-12 xl:left-0  w-[130%] md:w-[90%] xl:w-1/2'>
+			<div className='relative w-[440px] md:w-[540px] xl:w-[600px] h-[270px] md:h-[320px] ml-8 xl:ml-0 mt-6 md:mt-12 xl:mt-0'>
 				{/* <img src='/home/desktop/easy.svg' alt='easy to implement illustration' /> */}
 				{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
-				<EasyIllustration></EasyIllustration>
+				<div className='absolute top-0 left-0 w-full transform xl:-translate-x-20 xl:-translate-y-6'>
+					<EasyIllustration></EasyIllustration>
+				</div>
 			</div>
 
 			{/* CONTENT BOX */}
-			<div className='pt-72 md:pt-[440px] xl:pt-[210px] text-center xl:text-left max-w-xl xl:max-w-lg '>
+			<div className='pt-6  text-center xl:text-left max-w-xl xl:max-w-md '>
 				<h2 className='text-3xl md:text-4xl font-serif font-bold mb-6'>Easy to implement</h2>
 				<p className='text'>
 					Our API comes with just a few lines of code. You’ll be up and running in no time. We built
