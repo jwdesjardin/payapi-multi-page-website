@@ -111,7 +111,8 @@ input:checked + div svg {
   font-family: 'Roboto Mono', monospace;
 }
 
-.bgTOP {
-  top: -500px;
+.brandRightState {
+  -webkit-transform: translateX(-1000px);
+          transform: translateX(-1000px);
 }
 /*# sourceMappingURL=global.css.map */

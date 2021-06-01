@@ -50,8 +50,8 @@ const HeroSection = () => {
 const BrandSection = () => {
 	return (
 		<section className='bg-blue-900 text-white-100 py-20 md:py-24 relative overflow-hidden'>
-			<div className='absolute scale-150 md:scale-100 xl:scale-125 max-w-3xl w-full top-0 transform -translate-y-3/4 md:-translate-y-2/3 xl:-translate-y-1/2 xl:-translate-x-1/3 '>
-				<img src='/shared/desktop/bg-pattern-circle.svg' alt='' />
+			<div className='absolute top-0 left-1/2 -translate-x-1/2 transform -translate-y-3/4 md:-translate-y-2/3 xl:-translate-y-1/3 xl:-translate-x-full '>
+				<object data='/shared/desktop/bg-pattern-circle.svg' />
 			</div>
 
 			<div className='content-container flex flex-col xl:flex-row-reverse items-center justify-center'>
