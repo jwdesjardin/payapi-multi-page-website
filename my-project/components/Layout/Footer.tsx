@@ -8,8 +8,8 @@ const Footer = () => {
 	return (
 		<footer className=' bg-blue-900 text-white-100 pt-8 pb-14 md:py-8 relative overflow-hidden '>
 			{/* BG IMAGE */}
-			<div className='overflow-hidden absolute -right-1/4 top-1/2 md:-top-1/2 md:-right-1/2 xl:-right-1/4'>
-				<BgCircleSVG></BgCircleSVG>
+			<div className='absolute w-[780px] left-1/2 -right-1/2 top-1/2 md:-top-3/4 xl:translate-x-60 transform'>
+				<img src='/shared/desktop/bg-pattern-circle.svg' alt='' />
 			</div>
 
 			{/* Footer Content */}
