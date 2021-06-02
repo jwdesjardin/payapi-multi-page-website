@@ -19,8 +19,19 @@ const about = () => {
 			</section>
 
 			<section className='content-container flex flex-col items-center space-y-12 md:space-y-16 mb-16 md:mb-24'>
-				<TextSection />
-				<TextSection />
+				<TextSection
+					title='Our Vision'
+					text='Our main goal is to build beautiful consumer experiences along with developer-friendly
+				infrastructure. The result is an intelligent tool that gives everyone the ability to create
+				amazing products that solve big problems. We are deeply focused on democratizing financial
+				services through technology.'
+				></TextSection>
+				<TextSection
+					title='Our Business'
+					text='At the core of our platform is the technical infrastructure APIs that connect consumers. 
+    Our innovative product provides key insights for businesses and individuals, as well as 
+    robust reporting for traditional financial institutions and developers.'
+				></TextSection>
 			</section>
 			<div className='team-background-image relative z-20'>
 				{/* <img src='/about/mobile/image-team-members.jpg' alt='' className='md:hidden' />
@@ -33,8 +44,17 @@ const about = () => {
 			</div>
 			<StatSection></StatSection>
 			<section className='content-container flex flex-col items-center space-y-12'>
-				<TextSection></TextSection>
-				<TextSection></TextSection>
+				<TextSection
+					title='The Culture'
+					text="We strongly believe there's always an opportunity to learn from each other outside of 
+    day-to-day work, whether it's company-wide offsites, internal hackathons, or co-worker meetups. 
+    We always value cross-team collaboration and diversity of thought, no matter the job title."
+				></TextSection>
+				<TextSection
+					title='The People'
+					text={`We're all passionate about building a more efficient and inclusive financial infrastructure 
+    together. At PayAPI, we have diverse backgrounds and skills.`}
+				></TextSection>
 			</section>
 		</Layout>
 	)
@@ -42,18 +62,13 @@ const about = () => {
 
 export default about
 
-const TextSection = () => {
+const TextSection = ({ title, text }: { title: string; text: string }) => {
 	return (
 		<div className='md:flex md:space-between'>
 			<h3 className='text-2xl md:text-3xl font-bold font-serif text-center md:text-left leading-none mb-4 md:w-1/3'>
-				Our Vision
+				{title}
 			</h3>
-			<p className='text text-center md:text-left md:w-2/3 max-w-3xl '>
-				Our main goal is to build beautiful consumer experiences along with developer-friendly
-				infrastructure. The result is an intelligent tool that gives everyone the ability to create
-				amazing products that solve big problems. We are deeply focused on democratizing financial
-				services through technology.
-			</p>
+			<p className='text text-center md:text-left md:w-2/3 max-w-3xl '>{text}</p>
 		</div>
 	)
 }

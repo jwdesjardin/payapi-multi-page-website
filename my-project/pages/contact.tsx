@@ -7,6 +7,9 @@ const contact = () => {
 	const inputGroupStyles = 'mb-6'
 	return (
 		<Layout>
+			<div className='absolute top-0 right-0 w-[780px] transform -translate-y-3/4 translate-x-2/3 md:-translate-y-2/3 md:translate-x-[500px] xl:translate-x-1/4'>
+				<img src='/shared/desktop/bg-pattern-circle.svg' alt='' />
+			</div>
 			<section className='content-container text-center xl:text-left pt-6 md:pt-12 xl:pt-14 mb-10 md:mb-12'>
 				<h1 className='text-3xl md:text-4xl xl:text-5xl max-w-lg xl:max-w-2xl mx-auto xl:ml-0 font-serif font-bold leading-none'>
 					Submit a help request and we’ll get in touch shortly.
