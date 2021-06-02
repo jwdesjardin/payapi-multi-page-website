@@ -61,18 +61,18 @@ const TextSection = () => {
 const StatSection = () => {
 	return (
 		<section className='content-container grey-y-border md:border-none text-center md:text-left my-12 py-6 xl:py-16 flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-6 '>
-			<StatCard />
-			<StatCard />
-			<StatCard />
+			<StatCard title='Team Members' value='300+' />
+			<StatCard title='Offices in the US' value='3' />
+			<StatCard title='Transactions analyzed' value='10M+' />
 		</section>
 	)
 }
 
-const StatCard = () => {
+const StatCard = ({ title, value }: { title: string; value: string }) => {
 	return (
 		<div className='md:grey-y-border md:py-4 md:w-1/3'>
-			<h4 className=''>Team Members</h4>
-			<p className='text-pink-700 text-5xl font-bold font-serif'>300+</p>
+			<h4 className=''>{title}</h4>
+			<p className='text-pink-700 text-5xl font-bold font-serif'>{value}</p>
 		</div>
 	)
 }
