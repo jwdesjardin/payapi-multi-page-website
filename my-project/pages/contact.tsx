@@ -3,6 +3,8 @@ import BrandGrid from '../components/BrandGrid'
 import Checkbox from '../components/Checkbox'
 import Layout from '../components/Layout'
 
+import { useRouter } from 'next/router'
+
 const contact = () => {
 	const inputGroupStyles = 'mb-2'
 
@@ -20,6 +22,14 @@ const contact = () => {
 			`Name: ${name} , Email: ${email} , Company: ${company} , Title: ${title} , Message: ${message}, Checked: ${checked}`
 		)
 	}
+	const router = useRouter()
+
+	React.useEffect(() => {
+		let email = router.query.email
+		if (typeof email === 'string') {
+			setEmail(email)
+		}
+	}, [router])
 
 	return (
 		<Layout>
