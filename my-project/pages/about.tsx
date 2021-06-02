@@ -4,6 +4,14 @@ import Layout from '../components/Layout'
 const about = () => {
 	return (
 		<Layout>
+			<div className='absolute top-0 right-0 w-[780px] transform -translate-y-3/4 translate-x-2/3 md:-translate-y-2/3 md:translate-x-[500px] xl:translate-x-1/4'>
+				<img src='/shared/desktop/bg-pattern-circle.svg' alt='' />
+			</div>
+
+			<div className='opacity-0 xl:opacity-100 absolute left-0 top-0 transform translate-y-[600px] -translate-x-2/3 '>
+				<img src='/shared/desktop/bg-pattern-circle.svg' alt='' />
+			</div>
+
 			<section className='content-container mb-10 md:mb-14 pt-4 md:pt-8 flex justify-center xl:justify-start xl:pl-24'>
 				<h1 className='text-3xl md:text-4xl max-w-xl font-bold font-serif text-center xl:text-left leading-none'>
 					We empower innovators by delivering access to the financial system
@@ -14,7 +22,7 @@ const about = () => {
 				<TextSection />
 				<TextSection />
 			</section>
-			<div className='team-background-image'>
+			<div className='team-background-image relative z-20'>
 				{/* <img src='/about/mobile/image-team-members.jpg' alt='' className='md:hidden' />
 				<img
 					src='/about/tablet/image-team-members.jpg'
