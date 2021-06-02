@@ -57,6 +57,20 @@
 	.grey-y-border {
 		@apply border-b border-t border-grey-400 border-opacity-25;
 	}
+	.team-background-image {
+		background-image: url('/about/mobile/image-team-members.jpg');
+		height: 300px;
+		background-size: cover;
+		background-position: center;
+		@media (min-width: 768px) {
+			background-image: url('/about/tablet/image-team-members.jpg');
+			height: 267px;
+		}
+		@media (min-width: 1110px) {
+			background-image: url('/about/desktop/image-team-members.jpg');
+			height: 500px;
+		}
+	}
 }
 
 // Checkbox related styles

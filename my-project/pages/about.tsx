@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 const about = () => {
 	return (
 		<Layout>
-			<section className='content-container mb-10 md:mb-14 pt-4 md:pt-8 flex justify-center xl:justify-start'>
+			<section className='content-container mb-10 md:mb-14 pt-4 md:pt-8 flex justify-center xl:justify-start xl:pl-24'>
 				<h1 className='text-3xl md:text-4xl max-w-xl font-bold font-serif text-center xl:text-left leading-none'>
 					We empower innovators by delivering access to the financial system
 				</h1>
@@ -14,15 +14,15 @@ const about = () => {
 				<TextSection />
 				<TextSection />
 			</section>
-			<section className='flex justify-center'>
-				<img src='/about/mobile/image-team-members.jpg' alt='' className='md:hidden' />
+			<div className='team-background-image'>
+				{/* <img src='/about/mobile/image-team-members.jpg' alt='' className='md:hidden' />
 				<img
 					src='/about/tablet/image-team-members.jpg'
 					alt=''
 					className='hidden md:block xl:hidden'
 				/>
-				<img src='/about/desktop/image-team-members.jpg' alt='' className='hidden xl:block' />
-			</section>
+				<img src='/about/desktop/image-team-members.jpg' alt='' className='hidden xl:block' /> */}
+			</div>
 			<StatSection></StatSection>
 			<section className='content-container flex flex-col items-center space-y-12'>
 				<TextSection></TextSection>
