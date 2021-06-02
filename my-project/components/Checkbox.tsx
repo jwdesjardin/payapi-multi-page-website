@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
 
-const Checkbox = () => {
-	const [checked, toggleChecked] = useState(false)
-	// console.log(checked)
+const Checkbox = ({ state, setState }: { state: boolean; setState: (state: boolean) => void }) => {
 	return (
 		<div className='flex items-center'>
 			<input
 				type='checkbox'
 				className='appearance-none absolute h-6 w-6'
-				checked={checked}
-				onChange={() => toggleChecked(!checked)}
+				checked={state}
+				onChange={() => setState(!state)}
 			/>
 			<div className='bg-grey-400 bg-opacity-50 w-6 h-6 flex flex-shrink-0 justify-center items-center'>
 				<CheckmarkSVG></CheckmarkSVG>

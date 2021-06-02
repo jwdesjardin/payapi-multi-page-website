@@ -5,6 +5,22 @@ import Layout from '../components/Layout'
 
 const contact = () => {
 	const inputGroupStyles = 'mb-2'
+
+	// Form State
+	const [name, setName] = React.useState('')
+	const [email, setEmail] = React.useState('')
+	const [company, setCompany] = React.useState('')
+	const [title, setTitle] = React.useState('')
+	const [message, setMessage] = React.useState('')
+	const [checked, setChecked] = React.useState(false)
+
+	const submitForm: React.FormEventHandler<HTMLFormElement> = (e) => {
+		e.preventDefault()
+		alert(
+			`Name: ${name} , Email: ${email} , Company: ${company} , Title: ${title} , Message: ${message}, Checked: ${checked}`
+		)
+	}
+
 	return (
 		<Layout>
 			<div className='absolute top-0 right-0 w-[780px] transform -translate-y-3/4 translate-x-2/3 md:-translate-y-2/3 md:translate-x-[500px] xl:translate-x-1/4'>
@@ -17,25 +33,60 @@ const contact = () => {
 			</section>
 			<div className='content-container flex flex-col xl:flex-row xl:space-x-32 items-center'>
 				<div className='max-w-md'>
-					<form action=''>
+					<form onSubmit={submitForm}>
 						<div className={inputGroupStyles}>
-							<input className='text-input' name='name' placeholder='Name' type='text' />
+							<input
+								className='text-input'
+								name='name'
+								placeholder='Name'
+								type='text'
+								value={name}
+								onChange={(e) => setName(e.target.value)}
+							/>
 						</div>
 						<div className={inputGroupStyles}>
-							<input className='text-input' name='email' placeholder='Email Address' type='text' />
+							<input
+								className='text-input'
+								name='email'
+								placeholder='Email Address'
+								type='text'
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+							/>
 						</div>
 						<div className={inputGroupStyles}>
-							<input className='text-input' name='company' placeholder='Company Name' type='text' />
+							<input
+								className='text-input'
+								name='company'
+								placeholder='Company Name'
+								type='text'
+								value={company}
+								onChange={(e) => setCompany(e.target.value)}
+							/>
 						</div>
 						<div className={inputGroupStyles}>
-							<input className='text-input' name='jobTitle' placeholder='Job Title' type='text' />
+							<input
+								className='text-input'
+								name='jobTitle'
+								placeholder='Job Title'
+								type='text'
+								value={title}
+								onChange={(e) => setTitle(e.target.value)}
+							/>
 						</div>
 						<div className={inputGroupStyles}>
-							<textarea rows={3} className='text-input' name='message' placeholder='Message' />
+							<textarea
+								rows={3}
+								className='text-input'
+								name='message'
+								placeholder='Message'
+								value={message}
+								onChange={(e) => setMessage(e.target.value)}
+							/>
 						</div>
 						<div className='flex mb-6 items-center'>
 							<div className='w-3/12'>
-								<Checkbox></Checkbox>
+								<Checkbox state={checked} setState={setChecked}></Checkbox>
 							</div>
 
 							<p className='text-md'>
