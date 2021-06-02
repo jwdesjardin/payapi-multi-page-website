@@ -4,7 +4,7 @@ import Heading from '../Heading'
 
 const Ready = () => {
 	return (
-		<div className='content-container py-20 md:py-24 flex flex-col xl:flex-row justify-center xl:justify-between items-center'>
+		<section className='content-container py-20 md:py-24 flex flex-col xl:flex-row justify-center xl:justify-between items-center'>
 			<Heading
 				type='h2'
 				size='md'
@@ -15,7 +15,7 @@ const Ready = () => {
 			<div className=''>
 				<EmailCapture></EmailCapture>
 			</div>
-		</div>
+		</section>
 	)
 }
 

@@ -109,7 +109,7 @@ const EasySection = () => {
 			</div>
 
 			{/* CONTENT BOX */}
-			<div className='pt-6  text-center xl:text-left max-w-xl xl:max-w-md '>
+			<div className='pt-6 text-center xl:text-left max-w-xl xl:max-w-md xl:-translate-x-6 transform '>
 				<h2 className='text-3xl md:text-4xl font-serif font-bold mb-6'>Easy to implement</h2>
 				<p className='text'>
 					Our API comes with just a few lines of code. You’ll be up and running in no time. We built
