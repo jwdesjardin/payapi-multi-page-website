@@ -5,6 +5,10 @@ const pricing = () => {
 	return (
 		<Layout>
 			<section className='content-container'>
+				<div className='absolute top-0 right-0 w-[780px] transform -translate-y-3/4 translate-x-2/3 md:-translate-y-2/3 md:translate-x-[500px] xl:translate-x-1/4'>
+					<img src='/shared/desktop/bg-pattern-circle.svg' alt='' />
+				</div>
+
 				<h1 className='text-3xl md:text-4xl xl:text-5xl font-serif font-bold text-center xl:text-left mb-12 md:mb-16 mt-6'>
 					Pricing
 				</h1>
@@ -84,7 +88,9 @@ const PriceComponent = ({
 			<div className='flex justify-center xl:justify-start xl:pl-10 border-b border-t border-grey-400 border-opacity-25 py-6 mb-6 w-full'>
 				<ul className='flex flex-col items-start'>
 					{values.map((item) => (
-						<li className={item.selected ? selected : unselected}>{item.value}</li>
+						<li key={item.value} className={item.selected ? selected : unselected}>
+							{item.value}
+						</li>
 					))}
 				</ul>
 			</div>
