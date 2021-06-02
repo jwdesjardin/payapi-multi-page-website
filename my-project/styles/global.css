@@ -21,7 +21,7 @@
     @apply bg-blue-900 hover:bg-white-100 border-2 border-white-100 text-white-100 hover:text-blue-900 text-md font-bold py-4 px-8 rounded-full leading-none disabled:border-opacity-50 disabled:text-opacity-50 transition-all;
   }
   .text-input {
-    @apply bg-white-200 border-b border-blue-500 pb-4 px-4 focus:outline-none focus:border-blue-700 focus:border-b-2 text-md text-blue-700 transition-all;
+    @apply w-full bg-white-200 border-b border-blue-500 pb-4 px-4 focus:outline-none focus:border-blue-700 focus:border-b-2 text-md text-blue-700 transition-all;
   }
 }
 
