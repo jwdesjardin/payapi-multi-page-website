@@ -7,13 +7,13 @@ const contact = () => {
 	const inputGroupStyles = 'mb-6'
 	return (
 		<Layout>
-			<section className='content-container text-center pt-6 mb-10'>
-				<h1 className='text-3xl font-serif font-bold leading-none'>
+			<section className='content-container text-center xl:text-left pt-6 md:pt-12 xl:pt-14 mb-10 md:mb-12'>
+				<h1 className='text-3xl md:text-4xl xl:text-5xl max-w-lg xl:max-w-2xl mx-auto xl:ml-0 font-serif font-bold leading-none'>
 					Submit a help request and we’ll get in touch shortly.
 				</h1>
 			</section>
-			<div className=''>
-				<div className='content-container'>
+			<div className='content-container flex flex-col xl:flex-row xl:space-x-32 items-center'>
+				<div className='max-w-md'>
 					<form action=''>
 						<div className={inputGroupStyles}>
 							<input className='text-input' id='name' placeholder='Name' type='text' />
@@ -47,11 +47,11 @@ const contact = () => {
 					</form>
 				</div>
 
-				<div className='mt-20 flex flex-col items-center text-center content-container'>
-					<h3 className='text-2xl font-serif font-bold max-w-xs mb-8'>
-						Join the thousands of innovators already building with us
+				<div className='mt-20 md:mt-16 flex flex-col items-center xl:items-start text-center xl:text-left '>
+					<h3 className='text-2xl font-serif font-bold max-w-xs md:max-w-md mb-8 md:mb-10'>
+						Join the thousands of innovators that are already building with us
 					</h3>
-					<div className='w-full px-4'>
+					<div className='w-full px-4 md:px-0 md:w-[541px] '>
 						<BrandGrid></BrandGrid>
 					</div>
 				</div>
