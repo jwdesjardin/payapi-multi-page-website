@@ -44,6 +44,19 @@
 	.content-container {
 		@apply mx-6 md:mx-10  xl:max-w-screen-xl xl:mx-auto;
 	}
+	.pinkCheckBefore {
+		&::before {
+			content: '';
+			background-image: url('../public/shared/desktop/icon-check.svg');
+			background-repeat: no-repeat;
+			position: absolute;
+			@apply h-4 w-4 transform -translate-x-8 translate-y-1;
+		}
+	}
+
+	.grey-y-border {
+		@apply border-b border-t border-grey-400 border-opacity-25;
+	}
 }
 
 // Checkbox related styles
@@ -86,14 +99,4 @@ input:checked + div svg {
 .slideOut {
 	animation: slideout;
 	animation-duration: 1s;
-}
-
-.pinkCheckBefore {
-	&::before {
-		content: '';
-		background-image: url('../public/shared/desktop/icon-check.svg');
-		background-repeat: no-repeat;
-		position: absolute;
-		@apply h-4 w-4 transform -translate-x-8 translate-y-1;
-	}
 }
