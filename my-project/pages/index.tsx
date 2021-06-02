@@ -124,7 +124,7 @@ const SimpleSection = () => {
 	return (
 		<section className='content-container relative flex xl:flex-row-reverse flex-col items-center justify-center xl:justify-between'>
 			{/* BG SVG */}
-			<div className='opacity-0 xl:opacity-100 absolute -right-1/2'>
+			<div className='opacity-0 xl:opacity-100 absolute right-0 transform translate-x-2/3'>
 				<img src='/shared/desktop/bg-pattern-circle.svg' alt='' />
 			</div>
 
