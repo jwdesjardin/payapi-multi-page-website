@@ -4,7 +4,7 @@ import Checkbox from '../components/Checkbox'
 import Layout from '../components/Layout'
 
 const contact = () => {
-	const inputGroupStyles = 'mb-6'
+	const inputGroupStyles = 'mb-2'
 	return (
 		<Layout>
 			<div className='absolute top-0 right-0 w-[780px] transform -translate-y-3/4 translate-x-2/3 md:-translate-y-2/3 md:translate-x-[500px] xl:translate-x-1/4'>
@@ -19,19 +19,19 @@ const contact = () => {
 				<div className='max-w-md'>
 					<form action=''>
 						<div className={inputGroupStyles}>
-							<input className='text-input' id='name' placeholder='Name' type='text' />
+							<input className='text-input' name='name' placeholder='Name' type='text' />
 						</div>
 						<div className={inputGroupStyles}>
-							<input className='text-input' id='email' placeholder='Email Address' type='text' />
+							<input className='text-input' name='email' placeholder='Email Address' type='text' />
 						</div>
 						<div className={inputGroupStyles}>
-							<input className='text-input' id='company' placeholder='Company Name' type='text' />
+							<input className='text-input' name='company' placeholder='Company Name' type='text' />
 						</div>
 						<div className={inputGroupStyles}>
-							<input className='text-input' id='jobTitle' placeholder='Job Title' type='text' />
+							<input className='text-input' name='jobTitle' placeholder='Job Title' type='text' />
 						</div>
 						<div className={inputGroupStyles}>
-							<textarea rows={3} className='text-input' id='message' placeholder='Message' />
+							<textarea rows={3} className='text-input' name='message' placeholder='Message' />
 						</div>
 						<div className='flex mb-6 items-center'>
 							<div className='w-3/12'>

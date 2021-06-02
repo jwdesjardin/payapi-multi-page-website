@@ -12,7 +12,14 @@ const NavbarTransition = () => {
 		<header className='relative z-20'>
 			<div className='flex items-center justify-between content-container py-6 md:py-10'>
 				<div className='flex items-center space-x-12 xl:space-x-20 text-blue-700'>
-					<LogoSVG></LogoSVG>
+					<Link href='/'>
+						<div>
+							<a href='/'>
+								<LogoSVG></LogoSVG>
+							</a>
+						</div>
+					</Link>
+
 					<div className='hidden md:flex space-x-8 xl:space-x-12 font-bold'>
 						<Link href='/pricing'>
 							<a className={linkHoverEffect}>Pricing</a>
