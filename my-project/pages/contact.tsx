@@ -15,7 +15,13 @@ const contact = () => {
 	const [title, setTitle] = React.useState('')
 	const [message, setMessage] = React.useState('')
 	const [checked, setChecked] = React.useState(true)
-	const [touched, setTouched] = React.useState(false)
+
+	//Touched State
+	const [touchedName, setTouchedName] = React.useState(false)
+	const [touchedEmail, setTouchedEmail] = React.useState(false)
+	const [touchedMessage, setTouchedMessage] = React.useState(false)
+
+	//Errors State
 	const [formErrors, setFormErrors] = React.useState<{
 		name?: string
 		email?: string
@@ -62,6 +68,20 @@ const contact = () => {
 		}
 	}, [router])
 
+	React.useEffect(() => {
+		setFormErrors({})
+		const errors = validateForm(name, email, message)
+		if (touchedName && errors.name) {
+			setFormErrors(errors)
+		} else if (touchedEmail && errors.email) {
+			setFormErrors(errors)
+		} else if (touchedMessage && errors.message) {
+			setFormErrors(errors)
+		}
+	}, [name, email, message, touchedName, touchedEmail, touchedMessage])
+
+	console.log(touchedName, touchedEmail, touchedMessage)
+
 	return (
 		<Layout>
 			<div className='absolute top-0 right-0 w-[780px] transform -translate-y-3/4 translate-x-2/3 md:-translate-y-2/3 md:translate-x-[500px] xl:translate-x-1/4'>
@@ -85,7 +105,7 @@ const contact = () => {
 								value={name}
 								onChange={(e) => setName(e.target.value)}
 								autoComplete='on'
-								// onFocus={() => setTouchedName(true)}
+								onBlur={() => setTouchedName(true)}
 							/>
 						</div>
 						<div className={inputGroupStyles}>
@@ -97,6 +117,7 @@ const contact = () => {
 								type='text'
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
+								onBlur={() => setTouchedEmail(true)}
 							/>
 						</div>
 						<div className={inputGroupStyles}>
@@ -130,6 +151,7 @@ const contact = () => {
 								placeholder='Message'
 								value={message}
 								onChange={(e) => setMessage(e.target.value)}
+								onBlur={() => setTouchedMessage(true)}
 							/>
 						</div>
 						<div className='flex mb-6 items-center'>
