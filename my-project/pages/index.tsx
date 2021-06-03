@@ -11,10 +11,6 @@ export default function Home() {
 			<div className='absolute top-0 left-1/2 xl:left transform -translate-x-1/2 xl:translate-x-32 -translate-y-2/3  md:-translate-y-3/4 xl:-translate-y-1/4 md:scale-125 xl:scale-100'>
 				<object data='/shared/desktop/bg-pattern-circle.svg' />
 			</div>
-			{/* <div className='absolute top-0 right-0 xl:max-w-2xl transform -translate-y-3/4 xl:-translate-y-1/4 xl:translate-x-1/4 scale-150 md:scale-125'>
-				<object data='/shared/desktop/bg-pattern-circle.svg' />
-			</div> */}
-
 			<HeroSection />
 			<BrandSection />
 			<EasySection />
@@ -26,10 +22,12 @@ export default function Home() {
 
 const HeroSection = () => {
 	return (
-		<section className='flex flex-col items-center xl:items-start justify-center content-container relative pb-20 md:pb-24'>
-			<div className='ml-8 w-52 md:w-72 xl:w-96 absolute top-0 xl:right-0'>
-				<img src='/home/desktop/new-mockups.svg' alt='mockups' />
-				{/* <HeroImage></HeroImage> */}
+		<section className='flex flex-col xl:flex-row-reverse items-center xl:justify-between justify-center content-container relative pb-20 md:pb-24'>
+			<div className='relative ml-8 w-52 md:w-72 xl:w-96 transform xl:-translate-y-60 '>
+				<div className='absolute '>
+					<img src='/home/desktop/new-mockups.svg' alt='mockups' />
+					{/* <HeroImage></HeroImage> */}
+				</div>
 			</div>
 
 			<div className='flex flex-col items-center xl:items-start justify-center pt-[300px] md:pt-[430px] xl:pt-24 md:max-w-lg xl:max-w-xl'>
@@ -41,6 +39,52 @@ const HeroSection = () => {
 				</div>
 				<p className='xl:ml-10'>
 					Have any questions? <span className='font-bold'>Contact Us</span>
+				</p>
+			</div>
+		</section>
+	)
+}
+// const HeroSection = () => {
+// 	return (
+// 		<section className='flex flex-col items-center xl:items-start justify-center content-container relative pb-20 md:pb-24'>
+// 			<div className='ml-8 w-52 md:w-72 xl:w-96 absolute top-0 xl:right-0 transform xl:-translate-y-6'>
+// 				<img src='/home/desktop/new-mockups.svg' alt='mockups' />
+// 				{/* <HeroImage></HeroImage> */}
+// 			</div>
+
+// 			<div className='flex flex-col items-center xl:items-start justify-center pt-[300px] md:pt-[430px] xl:pt-24 md:max-w-lg xl:max-w-xl'>
+// 				<h1 className='text-3xl md:text-4xl xl:text-6xl leading-none font-bold xl:leading-none text-center xl:text-left font-serif mb-6 md:mb-8 xl:mb-10'>
+// 					Start building with our APIs for absolutely free.
+// 				</h1>
+// 				<div className='mb-6'>
+// 					<EmailCapture></EmailCapture>
+// 				</div>
+// 				<p className='xl:ml-10'>
+// 					Have any questions? <span className='font-bold'>Contact Us</span>
+// 				</p>
+// 			</div>
+// 		</section>
+// 	)
+// }
+
+const EasySection = () => {
+	return (
+		<section className='content-container relative pb-20 flex flex-col xl:flex-row items-center justify-center xl:pt-20'>
+			{/* IMAGE BOX */}
+			<div className=''>
+				<div className='w-[440px] md:w-[540px] xl:w-[600px] transform xl:-translate-x-20 xl:translate-y-6'>
+					<EasyIllustration></EasyIllustration>
+					{/* <img src='/home/desktop/new-easy.svg' alt='easy to implement illustration' /> */}
+					{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
+				</div>
+			</div>
+
+			{/* CONTENT BOX */}
+			<div className='pt-6 xl:pt-0 text-center xl:text-left max-w-xl xl:max-w-md xl:-translate-x-6 transform '>
+				<h2 className='text-3xl md:text-4xl font-serif font-bold mb-6'>Easy to implement</h2>
+				<p className='text'>
+					Our API comes with just a few lines of code. You’ll be up and running in no time. We built
+					our documentation page to integrate payments functionality with ease.
 				</p>
 			</div>
 		</section>
@@ -74,55 +118,9 @@ const BrandSection = () => {
 	)
 }
 
-// const EasySection = () => {
-// 	return (
-// 		<section className='content-container relative pb-20 xl:flex xl:flex-row-reverse'>
-// 			{/* IMAGE BOX */}
-// 			<div className='absolute transform top-6 md:top-10 xl:top-36 -left-8 md:left-12 xl:left-0  w-[130%] md:w-[90%] xl:w-1/2'>
-// 				{/* <img src='/home/desktop/easy.svg' alt='easy to implement illustration' /> */}
-// 				{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
-// 				<EasyIllustration></EasyIllustration>
-// 			</div>
-
-// 			{/* CONTENT BOX */}
-// 			<div className='pt-72 md:pt-[440px] xl:pt-[210px] text-center xl:text-left max-w-xl xl:max-w-lg '>
-// 				<h2 className='text-3xl md:text-4xl font-serif font-bold mb-6'>Easy to implement</h2>
-// 				<p className='text'>
-// 					Our API comes with just a few lines of code. You’ll be up and running in no time. We built
-// 					our documentation page to integrate payments functionality with ease.
-// 				</p>
-// 			</div>
-// 		</section>
-// 	)
-// }
-
-const EasySection = () => {
-	return (
-		<section className='content-container relative pb-20 flex flex-col items-center justify-center xl:flex-row xl:pt-32'>
-			{/* IMAGE BOX */}
-			<div className='relative w-[440px] md:w-[540px] xl:w-[600px] h-[270px] md:h-[320px] ml-8 xl:ml-0 mt-6 md:mt-12 xl:mt-0'>
-				<div className='absolute top-0 left-0 w-full transform xl:-translate-x-20 xl:-translate-y-6'>
-					<EasyIllustration></EasyIllustration>
-					{/* <img src='/home/desktop/new-easy.svg' alt='easy to implement illustration' /> */}
-					{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
-				</div>
-			</div>
-
-			{/* CONTENT BOX */}
-			<div className='pt-6 text-center xl:text-left max-w-xl xl:max-w-md xl:-translate-x-6 transform '>
-				<h2 className='text-3xl md:text-4xl font-serif font-bold mb-6'>Easy to implement</h2>
-				<p className='text'>
-					Our API comes with just a few lines of code. You’ll be up and running in no time. We built
-					our documentation page to integrate payments functionality with ease.
-				</p>
-			</div>
-		</section>
-	)
-}
-
 const SimpleSection = () => {
 	return (
-		<section className='content-container relative flex xl:flex-row-reverse flex-col items-center justify-center xl:justify-between'>
+		<section className='content-container relative flex flex-col xl:flex-row-reverse items-center justify-center xl:justify-between'>
 			{/* BG SVG */}
 			<div className='opacity-0 xl:opacity-100 absolute right-0 transform translate-x-2/3'>
 				<img src='/shared/desktop/bg-pattern-circle.svg' alt='' />
