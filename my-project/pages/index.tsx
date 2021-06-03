@@ -10,7 +10,7 @@ export default function Home() {
 	return (
 		<Layout title='Homepage'>
 			<div className='absolute top-0 left-1/2 xl:left transform -translate-x-1/2 xl:translate-x-32 -translate-y-2/3  md:-translate-y-3/4 xl:-translate-y-1/4 md:scale-125 xl:scale-100'>
-				<object tabIndex={-1} data='/shared/desktop/bg-pattern-circle.svg' tabIndex={-1} />
+				<object tabIndex={-1} data='/shared/desktop/bg-pattern-circle.svg' />
 			</div>
 			<HeroSection />
 			<BrandSection />

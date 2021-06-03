@@ -5,6 +5,8 @@ import Layout from '../components/Layout'
 
 import { useRouter } from 'next/router'
 
+import debounce from 'lodash.debounce'
+
 const contact = () => {
 	const inputGroupStyles = 'mb-2 relative'
 
@@ -68,19 +70,18 @@ const contact = () => {
 		}
 	}, [router])
 
+	// Solution #2 : validate each time inputs are changed or blurred
 	React.useEffect(() => {
 		setFormErrors({})
 		const errors = validateForm(name, email, message)
-		if (touchedName && errors.name) {
+		if (touchedName && errors?.name) {
 			setFormErrors(errors)
-		} else if (touchedEmail && errors.email) {
+		} else if (touchedEmail && errors?.email) {
 			setFormErrors(errors)
 		} else if (touchedMessage && errors.message) {
 			setFormErrors(errors)
 		}
 	}, [name, email, message, touchedName, touchedEmail, touchedMessage])
-
-	console.log(touchedName, touchedEmail, touchedMessage)
 
 	return (
 		<Layout>
