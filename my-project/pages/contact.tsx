@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import { useRouter } from 'next/router'
 
 const contact = () => {
-	const inputGroupStyles = 'mb-2'
+	const inputGroupStyles = 'mb-2 relative'
 
 	// Form State
 	const [name, setName] = React.useState('')
@@ -14,14 +14,45 @@ const contact = () => {
 	const [company, setCompany] = React.useState('')
 	const [title, setTitle] = React.useState('')
 	const [message, setMessage] = React.useState('')
-	const [checked, setChecked] = React.useState(false)
+	const [checked, setChecked] = React.useState(true)
+	const [touched, setTouched] = React.useState(false)
+	const [formErrors, setFormErrors] = React.useState<{
+		name?: string
+		email?: string
+		message?: string
+	}>({})
+
+	const validateForm = (name: string, email: string, message: string) => {
+		const errors: { name?: string; email?: string; message?: string } = {}
+		if (name === '') {
+			errors.name = 'Required'
+		} else if (email === '') {
+			errors.email = 'Required'
+		} else if (message === '') {
+			errors.message = 'Required'
+		} else if (/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(email) === false) {
+			errors.email = 'Please provide a valid email'
+		}
+		console.log(errors)
+		return errors
+	}
 
 	const submitForm: React.FormEventHandler<HTMLFormElement> = (e) => {
 		e.preventDefault()
-		alert(
-			`Name: ${name} , Email: ${email} , Company: ${company} , Title: ${title} , Message: ${message}, Checked: ${checked}`
-		)
+
+		const errors = validateForm(name, email, message)
+		if (Object.keys(errors).length === 0) {
+			setFormErrors({})
+			setTimeout(() => {
+				alert(
+					`Name: ${name} , Email: ${email} , Company: ${company} , Title: ${title} , Message: ${message}, Checked: ${checked}`
+				)
+			}, 400)
+		} else {
+			setFormErrors(errors)
+		}
 	}
+
 	const router = useRouter()
 
 	React.useEffect(() => {
@@ -45,19 +76,22 @@ const contact = () => {
 				<div className='max-w-md'>
 					<form onSubmit={submitForm}>
 						<div className={inputGroupStyles}>
+							{formErrors?.name && <p className='error-label'>{formErrors?.name}</p>}
 							<input
-								className='text-input'
+								className={formErrors?.name ? 'text-input input-error ' : 'text-input'}
 								name='name'
 								placeholder='Name'
 								type='text'
 								value={name}
 								onChange={(e) => setName(e.target.value)}
 								autoComplete='on'
+								// onFocus={() => setTouchedName(true)}
 							/>
 						</div>
 						<div className={inputGroupStyles}>
+							{formErrors?.email && <p className='error-label'>{formErrors?.email}</p>}
 							<input
-								className='text-input'
+								className={formErrors?.email ? 'text-input input-error' : 'text-input'}
 								name='email'
 								placeholder='Email Address'
 								type='text'
@@ -88,9 +122,10 @@ const contact = () => {
 							/>
 						</div>
 						<div className={inputGroupStyles}>
+							{formErrors?.message && <p className='error-label'>{formErrors?.message}</p>}
 							<textarea
 								rows={3}
-								className='text-input'
+								className={formErrors?.message ? 'text-input input-error' : 'text-input'}
 								name='message'
 								placeholder='Message'
 								value={message}

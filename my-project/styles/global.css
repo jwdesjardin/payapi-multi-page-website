@@ -27,14 +27,21 @@
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px lightpink inset !important;
-    -webkit-text-fill-color: #1b262f !important;
+    -webkit-box-shadow: 0 0 0 30px #36536b inset !important;
+    -webkit-text-fill-color: #fbfcfe !important;
   }
 }
 
 @layer utilities {
   .input-error {
     @apply border-red-500 text-red-500 placeholder-red-500 focus:border-red-500;
+  }
+  .error-label {
+    @apply text-red-500 text-[12px] absolute right-0 top-4;
+  }
+  .error-label::before {
+    content: '*';
+    margin-right: 0.5rem;
   }
   .text {
     @apply text-md leading-loose;
