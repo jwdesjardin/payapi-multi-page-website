@@ -34,38 +34,42 @@ STEPS
 #### layout
 
 [x] navbar
-[] footer
-[] ready \*\*reused
+[x] footer
+[x] ready \*\*reused
 
 ## Build HomePage
 
 [] build out home page components + assemble into homepage as I go
-[] hero
-[] brands
-[] easy
-[] simple
-[] info-grid
+[x] hero
+[x] brands
+[x] easy
+[x] simple
+[x] info-grid
 
 ## Build Pricing Page
 
-[] pricecomponent
-[] price grid
+[x] price component
+[x] price grid
 
 ## Build about page
 
-[] Page Title
-[] Details**
-[] Image
-[] stats-grid
-[] Details**
+[x] Page Title
+[x] Details**
+[x] Image
+[x] stats-grid
+[x] Details**
 
 ## build contact page
 
-[] page title
-[] contact form
-[] brand content
+[x] page title
+[x] contact form
+[x] brand content
 
-[] add background designs absolute and negative z-index
+[x] add background designs absolute and ~~negative z-index~~
+
+Steps left
+Refactor - DRY up common patterns
+Make Improvements - state/form
 
 ISSUES menu animation
 
@@ -155,3 +159,66 @@ Steps to solve this manually without Transition
 1. add slideOut, and translate on close click (no state is used
 
 using headless transition allows you to use state so the element is removed from the dom the end and triggered by state changes
+
+## things i have learned so far
+
+- svg viewbox to scale svg components (2 options image/object or inline svg)
+
+- animations entering and exiting translate
+  -hiding offscreen elements
+
+  - transitions offscreen instead of removing from state
+  - possible add a timeout to remove from dom after animation in custom funtoin
+  - headless ui transition property helps with a lot of this
+
+- svg id naming conflict when using inline-svgs
+
+- use css with svgs when object or inline (fill-current, stoke-current)
+
+- xmlSpace='preserve'
+
+- passing data / collecting data from query string
+
+- image that expands to fit all screen sizes
+
+- transform translates to place absolute items must be in relative
+
+- must be non static to use z-index
+
+- layout section
+
+- dynamic components
+
+1. SVGs - scaling - embedding fonts - nano
+
+1. Menu Components - dont scroll : postion - fixed - z-index : postion relative - sliding tansition
+
+1. Layout Component
+   Head component
+   -Navbar - Footer - Ready Section
+
+1. Passing Email with Query String
+
+1. exiting animations and Headless ui Transition
+
+1. Postioning images
+
+- abosulte : translates bg circle (2 options relative layout or relative container)
+- set width and tanslate text and image with shadow (sometimes absolute)
+- scalable bg iamge cover : about page
+
+1. input focus, autocomplete styling, checkbox styling
+
+1. form state and custom validation
+
+1. focus outlines and active states for accesibility
+
+Homepage layout
+
+## common patterns
+
+bg circle
+heading text
+
+grey borders y
+buttons
