@@ -52,6 +52,7 @@ const contact = () => {
 								type='text'
 								value={name}
 								onChange={(e) => setName(e.target.value)}
+								autoComplete='on'
 							/>
 						</div>
 						<div className={inputGroupStyles}>
@@ -72,6 +73,7 @@ const contact = () => {
 								type='text'
 								value={company}
 								onChange={(e) => setCompany(e.target.value)}
+								autoComplete='on'
 							/>
 						</div>
 						<div className={inputGroupStyles}>
@@ -82,6 +84,7 @@ const contact = () => {
 								type='text'
 								value={title}
 								onChange={(e) => setTitle(e.target.value)}
+								autoComplete='on'
 							/>
 						</div>
 						<div className={inputGroupStyles}>
@@ -104,7 +107,7 @@ const contact = () => {
 							</p>
 						</div>
 						<div className='flex '>
-							<button className='button-light w-[152px]' type='submit'>
+							<button className='button-light w-[152px] focus:outline-black' type='submit'>
 								Submit
 							</button>
 						</div>

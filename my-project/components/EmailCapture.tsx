@@ -11,7 +11,7 @@ const EmailCapture = () => {
 	return (
 		<div className='shadow-none md:shadow-lg rounded-full inline-flex items-center justify-between max-w-md flex-wrap md:flex-nowrap '>
 			<input
-				type='text'
+				type='email'
 				className={inputStyles + ' ' + genericInput}
 				placeholder='Enter email address'
 				value={email}

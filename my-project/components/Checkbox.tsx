@@ -19,7 +19,7 @@ const Checkbox = ({ state, setState }: { state: boolean; setState: (state: boole
 const CheckmarkSVG = () => {
 	return (
 		<svg
-			className='fill-current hidden w-3 h-3 text-blue-7 pointer-events-none'
+			className='fill-current hidden w-3 h-3 text-blue-7 pointer-events-none focus:outline-black'
 			version='1.1'
 			viewBox='0 0 17 12'
 			xmlns='http://www.w3.org/2000/svg'

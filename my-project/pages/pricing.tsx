@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import Layout from '../components/Layout'
 
@@ -94,8 +95,9 @@ const PriceComponent = ({
 					))}
 				</ul>
 			</div>
-
-			<button className='button-light'>Request Access</button>
+			<Link href='/contact'>
+				<button className='button-light focus:outline-black'>Request Access</button>
+			</Link>
 		</div>
 	)
 }

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import BrandGrid from '../components/BrandGrid'
 import EmailCapture from '../components/EmailCapture'
@@ -9,7 +10,7 @@ export default function Home() {
 	return (
 		<Layout title='Homepage'>
 			<div className='absolute top-0 left-1/2 xl:left transform -translate-x-1/2 xl:translate-x-32 -translate-y-2/3  md:-translate-y-3/4 xl:-translate-y-1/4 md:scale-125 xl:scale-100'>
-				<object data='/shared/desktop/bg-pattern-circle.svg' />
+				<object tabIndex={-1} data='/shared/desktop/bg-pattern-circle.svg' tabIndex={-1} />
 			</div>
 			<HeroSection />
 			<BrandSection />
@@ -38,34 +39,17 @@ const HeroSection = () => {
 					<EmailCapture></EmailCapture>
 				</div>
 				<p className='xl:ml-10'>
-					Have any questions? <span className='font-bold'>Contact Us</span>
+					Have any questions?{' '}
+					<Link passHref href='/contact'>
+						<a className='font-bold focus:outline-black active:border-b-2 active:border-blue-900'>
+							Contact Us
+						</a>
+					</Link>
 				</p>
 			</div>
 		</section>
 	)
 }
-// const HeroSection = () => {
-// 	return (
-// 		<section className='flex flex-col items-center xl:items-start justify-center content-container relative pb-20 md:pb-24'>
-// 			<div className='ml-8 w-52 md:w-72 xl:w-96 absolute top-0 xl:right-0 transform xl:-translate-y-6'>
-// 				<img src='/home/desktop/new-mockups.svg' alt='mockups' />
-// 				{/* <HeroImage></HeroImage> */}
-// 			</div>
-
-// 			<div className='flex flex-col items-center xl:items-start justify-center pt-[300px] md:pt-[430px] xl:pt-24 md:max-w-lg xl:max-w-xl'>
-// 				<h1 className='text-3xl md:text-4xl xl:text-6xl leading-none font-bold xl:leading-none text-center xl:text-left font-serif mb-6 md:mb-8 xl:mb-10'>
-// 					Start building with our APIs for absolutely free.
-// 				</h1>
-// 				<div className='mb-6'>
-// 					<EmailCapture></EmailCapture>
-// 				</div>
-// 				<p className='xl:ml-10'>
-// 					Have any questions? <span className='font-bold'>Contact Us</span>
-// 				</p>
-// 			</div>
-// 		</section>
-// 	)
-// }
 
 const EasySection = () => {
 	return (
@@ -74,8 +58,6 @@ const EasySection = () => {
 			<div className=''>
 				<div className='w-[440px] md:w-[540px] xl:w-[600px] transform xl:-translate-x-20 xl:translate-y-6'>
 					<EasyIllustration></EasyIllustration>
-					{/* <img src='/home/desktop/new-easy.svg' alt='easy to implement illustration' /> */}
-					{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
 				</div>
 			</div>
 
@@ -95,14 +77,14 @@ const BrandSection = () => {
 	return (
 		<section className='bg-blue-900 text-white-100 py-20 md:py-24 relative overflow-hidden'>
 			<div className='absolute top-0 left-1/2 -translate-x-1/2 transform -translate-y-3/4 md:-translate-y-2/3 xl:-translate-y-1/3 xl:-translate-x-full '>
-				<object data='/shared/desktop/bg-pattern-circle.svg' />
+				<object tabIndex={-1} data='/shared/desktop/bg-pattern-circle.svg' />
 			</div>
 
 			<div className='content-container flex flex-col xl:flex-row-reverse items-center justify-center'>
 				<div className='mb-16 xl:mb-0 max-w-xs md:max-w-xl xl:max-w-lg px-6 md:px-0 md:mx-auto xl:mr-0 w-full xl:w-1/2 '>
 					<BrandGrid></BrandGrid>
 				</div>
-				<div className='text-center xl:text-left max-w-md  xl:w-1/2 '>
+				<div className='text-center xl:text-left max-w-md  xl:w-1/2 relative z-10 '>
 					<h2 className='text-3xl md:text-4xl font-bold mb-4 xl:mb-6 font-serif'>
 						Who we work with
 					</h2>
@@ -131,7 +113,7 @@ const SimpleSection = () => {
 				<div className='w-[430px] md:w-[516px] transform translate-x-3 xl:translate-x-20'>
 					{/* <SimpleIllustration></SimpleIllustration> */}
 					<img src='/home/desktop/new-simple.svg' alt='simple ui illustration' />
-					{/* <object data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
+					{/* <object tabIndex={-1} data='/home/desktop/easy.svg' type='image/svg+xml' className='easySVG' /> */}
 				</div>
 			</div>
 

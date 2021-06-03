@@ -3,8 +3,8 @@ import React from 'react'
 import { BgCircleSVG, FacebookSVG, LinkedinSVG, LogoSVG, TwitterSVG } from '../Icons'
 
 const Footer = () => {
-	const linkHoverEffect = 'hover:opacity-100 opacity-60 transition-all'
-	const socialHoverEffect = 'hover:text-pink-700 text-white-100 transition-all'
+	const linkHoverEffect = 'hover:opacity-100 opacity-60 transition-all focus:outline-white'
+	const socialHoverEffect = 'hover:text-pink-700 text-white-100 transition-all focus:outline-white'
 	return (
 		<footer className=' bg-blue-900 text-white-100 pt-8 pb-14 md:py-8 relative overflow-hidden '>
 			{/* BG IMAGE */}
@@ -16,7 +16,11 @@ const Footer = () => {
 			<div className='content-container  flex flex-col md:flex-row  items-center justify-center md:justify-between'>
 				<div className='md:flex md:space-x-12'>
 					<div className='mb-10 md:mb-0'>
-						<LogoSVG></LogoSVG>
+						<Link href='/' passHref>
+							<a className='focus:outline-white'>
+								<LogoSVG></LogoSVG>
+							</a>
+						</Link>
 					</div>
 					<div className='flex flex-col md:flex-row md:space-x-6 items-center justify-center'>
 						<Link href='/pricing'>
