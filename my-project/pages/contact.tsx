@@ -5,8 +5,6 @@ import Layout from '../components/Layout'
 
 import { useRouter } from 'next/router'
 
-import debounce from 'lodash.debounce'
-
 const contact = () => {
 	const inputGroupStyles = 'mb-2 relative'
 
