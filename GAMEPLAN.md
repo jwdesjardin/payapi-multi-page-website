@@ -162,33 +162,6 @@ using headless transition allows you to use state so the element is removed from
 
 ## things i have learned so far
 
-- svg viewbox to scale svg components (2 options image/object or inline svg)
-
-- animations entering and exiting translate
-  -hiding offscreen elements
-
-  - transitions offscreen instead of removing from state
-  - possible add a timeout to remove from dom after animation in custom funtoin
-  - headless ui transition property helps with a lot of this
-
-- svg id naming conflict when using inline-svgs
-
-- use css with svgs when object or inline (fill-current, stoke-current)
-
-- xmlSpace='preserve'
-
-- passing data / collecting data from query string
-
-- image that expands to fit all screen sizes
-
-- transform translates to place absolute items must be in relative
-
-- must be non static to use z-index
-
-- layout section
-
-- dynamic components
-
 1. SVGs - scaling - embedding fonts - nano
 
 1. Menu Components - dont scroll : postion - fixed - z-index : postion relative - sliding tansition
@@ -209,13 +182,11 @@ using headless transition allows you to use state so the element is removed from
 
 1. input focus, autocomplete styling, checkbox styling
 
-1. form state and custom validation
-
 1. focus outlines and active states for accesibility
 
-Homepage layout
+1. custom input validation (2 methods: onSubmit and onChange)
 
-## common patterns
+## common patterns to factor out
 
 bg circle
 heading text
