@@ -52,26 +52,26 @@ Users should be able to:
 
 ### Homepage
 
-| Homepage - Cropped                                                              | Homepage - Full                                                             |
-| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| <img src="./README-assets/home-small.png" alt="home page cropped" width="400"/> | <img src="./README-assets/home-full.png" alt="home page full" width="400"/> |
+ <img src="./README-assets/home-full.png" alt="home page full" width="450"/>
 
-### About, Pricing
+### About
 
-| About Page                                                          | Pricing Page                                                            |
-| ------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| <img src="./README-assets/about.png" alt="about page" width="400"/> | <img src="./README-assets/pricing.png" alt="pricing page" width="400"/> |
+<img src="./README-assets/about.png" alt="about page" width="450"/>
+
+### Pricing
+
+<img src="./README-assets/pricing.png" alt="pricing page" width="450"/>
 
 ### Contact
 
 | Contact - Fresh                                                                     | Contact - Error                                                                         |
 | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| <img src="./README-assets/contact-clean.png" alt="contact page fresh" width="400"/> | <img src="./README-assets/contact-error.png" alt="contact page filled in" width="400"/> |
+| <img src="./README-assets/contact-clean.png" alt="contact page fresh" width="450"/> | <img src="./README-assets/contact-error.png" alt="contact page filled in" width="450"/> |
 
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/jwdesjardin/payapi-multi-page-website)
-- Live Site URL: [Live Demo](https://your-live-site-url.com)
+- Live Site URL: [Live Demo](https://payapi-multi-page-website-seven.vercel.app/)
 
 # My process
 
