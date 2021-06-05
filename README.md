@@ -2,7 +2,7 @@
 
 This is a solution to the [PayAPI multi-page website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/payapi-multipage-website-FDLR1Y11e). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Table of contents
+# Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
@@ -23,9 +23,9 @@ This is a solution to the [PayAPI multi-page website challenge on Frontend Mento
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-## Overview
+# Overview
 
-### The challenge
+## The challenge
 
 What i was given:
 
@@ -48,37 +48,34 @@ Users should be able to:
   - The `Email Address` is not formatted correctly should show "Please use a valid email address"
 ```
 
-### Screenshots of my finished project
+## Screenshots of my finished project
 
-#### Homepage
+### Homepage
 
-<img src="./README-assets/home-small.png" alt="home page cropped" width="400"/>
-<img src="./README-assets/home-full.png" alt="home page full" width="400"/>
+| Homepage - Cropped                                                              | Homepage - Full                                                             |
+| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| <img src="./README-assets/home-small.png" alt="home page cropped" width="400"/> | <img src="./README-assets/home-full.png" alt="home page full" width="400"/> |
 
-#### About
+### About, Pricing
 
-<img src="./README-assets/about.png" alt="about page" width="400"/>
+| About Page                                                          | Pricing Page                                                            |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| <img src="./README-assets/about.png" alt="about page" width="400"/> | <img src="./README-assets/pricing.png" alt="pricing page" width="400"/> |
 
-#### Pricing
+### Contact
 
-<img src="./README-assets/pricing.png" alt="pricing page" width="400"/>
-
-#### Contact
-
-<img src="./README-assets/contact-clean.png" alt="contact page fresh" width="400"/>
-
-#### Contact Error
-
-<img src="./README-assets/contact-error.png" alt="contact page filled in" width="400"/>
+| Contact - Fresh                                                                     | Contact - Error                                                                         |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| <img src="./README-assets/contact-clean.png" alt="contact page fresh" width="400"/> | <img src="./README-assets/contact-error.png" alt="contact page filled in" width="400"/> |
 
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/jwdesjardin/payapi-multi-page-website)
 - Live Site URL: [Live Demo](https://your-live-site-url.com)
 
-## My process
+# My process
 
-### Built with
+## Built with
 
 - Tailwind CSS
   > Using tailwind as much as possible was at the front of mind when building this. Breaking apart components where styles are reused. Using a well-built config file. Using pseudo selectors, postions, transforms . Using the JIT compiler for adding custom css classes.
@@ -89,13 +86,13 @@ Users should be able to:
 - Custom form validation
   > In the past I have used Formik but just as a refresher of all that is going on under the hood in form validation I choose to write my own in this project.
 
-### What I learned
+## What I learned
 
 **The biggest sections where i learned something new each have there own section below.**
 
 ## Using SVG
 
-#### Displaying svgs options
+### Displaying svgs options
 
 When displaying SVG's in a website there are three main ways that are used. Inline-SVG means to include the `<svg/>` html element and all of its children directly in your code.
 
@@ -117,11 +114,11 @@ can be changed by css
 code is seperate context then file
 not given the img role
 
-#### Using Viewbox to scale
+### Using Viewbox to scale
 
 The original SVG's in this project were given a height and a width attribute. This works great when using the image Tag and is scalable as you would expect an image with these dimensions to be. When using the object tag or inline-svg with fixed dimensions like this the svg will not scale by default. In oder to get the scaling effect of svgs we want to replace the height and width with a `viewBox` value. A `viewBox` value is a string with the values `'x, y, width, height'` the width and height are used to set the aspect ratio of the scalable svg and the x and y (commonly used as 0, 0) are telling the `viewBox` where to start. If left at 0, 0 the viewBox will start in the top-left corner.
 
-#### Embedding fonts in SVG's - nano
+### Embedding fonts in SVG's - nano
 
 When using the Image tag method or the Object tag method i was unable to use the font-families i had included in my CSS in rendered SVG. When using inline-svgs i was able to use these font-families. When using multiple svgs on the same page like i was doing on the homepage the inline-svg `id` attibutes began to conflict with each other causing parts of SVG to display incorrectly or not at all. When i render the SVG with the image tag or object tag the ids do not conflict. This leaves me in a spot where classes conflict when i use inline-svg but i cannot access the correct fonts asked for in my svg `<text>` elements if i use anything but inline-svg
 
@@ -135,11 +132,11 @@ This is why i used the nano service to drag and drop my svg files and have them 
 
 I used the layout component to group all the components that were going to be the same for every page into a wrapper that i can then use to wrap each of my page componnents.
 
-#### Head component
+### Head component
 
 The head component extends the `Head` component from `next/head`. The page title is passed from the Layout component to the head component to change the page title of each page easily.
 
-#### Navbar Component
+### Navbar Component
 
 The navbar component shows either a hamburger menu if the screen-size is mobile or a flex-row of links if the screen-size is tablet or above. The navbar component also uses a `z-index` to keep the navlinks sitting above any other objects such a `absolute` positioned images. In order to get `z-index` to take effect we need to make sure that the div is in affecting is postioned somthing other than `static`, we used `relative` in our navbar.
 
@@ -147,7 +144,7 @@ The menu controls state for the menu that will slide out when the hamburger butt
 
 ## Passing Query Strings
 
-#### passing query string with next/link
+### passing query string with next/link
 
 To pass a query string with `next/link` you use the syntax as seen below and its as easy as that. The path that is created for this example is `/contact?email=EMAIL`
 
@@ -162,7 +159,7 @@ To pass a query string with `next/link` you use the syntax as seen below and its
 </Link>
 ```
 
-#### picking up query string with router and useEffect
+### picking up query string with router and useEffect
 
 In order to get the desired effect we want which is to have the emailComponent direct us to the contact page and prefill the email input portion of the form with what ever we typed into the form on the email component. In the page that contains our form we will need to collect this query string. To do this we use the `next/router` to get access to the current router. Then on pageload inside a React.useEffect with an empty dependency array we can access this instance of `router.query` and it will give us either a string or a string array. Because i am jsut expecting a string for the value of email in my case i check that i have the right type and then update the state on the page which in turn updates the controlled component for the email.
 
@@ -177,11 +174,11 @@ React.useEffect(() => {
 
 ## Exit Animations
 
-#### why exit animations
+### why exit animations
 
 Exit animations are used to animate when something is leaving the display and often coninsides with a a change of state or removing an element from the DOM. This is expecially hard when an item is being removed from the DOM becuase the removing the item cannot happen until the end of the animation
 
-#### keyframes solution
+### keyframes solution
 
 Using the keyframes solution you will use the following steps
 
@@ -193,7 +190,7 @@ Using the keyframes solution you will use the following steps
 
 You can also not remove from DOM and leave offscreen with overflow:hidden on the body but i prefer to remove offscreen elemenets from the DOM if there are not meant to be used or interacted with.
 
-#### headless ui transition
+### headless ui transition
 
 Using the Headless UI 'Transition' component allows you to make exit animations much easier. The `show` attribute can be linked up with the boolean state that controls the display of the component and it will be removed from the DOM only after the exit animation has occured. Now you are given a place to include the enter styles which are consitent throughout the animation and the `enterFrom` and `enterTo` styles that will be animated over the duartion of the animation.
 
